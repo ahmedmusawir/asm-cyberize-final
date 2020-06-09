@@ -1,0 +1,1083 @@
+/**
+ * ITEM INDEX
+ * 1. ATHLETE & COACH SINGLE PROFILE
+ *  1a. ATHLETE PROFILE RIGHT EMAIL BUTTONS
+ *  2a. ATHLETE VIEW COUNT BOX ON RIGHT SIDEBAR
+ * 2. ATHLETE & COACH INDEX
+ * 3. BP GLOBAL SEARCH INDEX
+ * 4. BP REGISTRATION PAGE
+ */
+
+/**
+ * GENERAL
+ */
+.container-fluid {
+  padding: 0 !important;
+}
+
+body.buddypress {
+  .site-content {
+    padding-top: 0 !important;
+  }
+}
+/**
+ * 1. ATHLETE & COACH SINGLE PROFILE
+ */
+
+#buddypress {
+  position: relative;
+
+  #change-cover-image-personal-li {
+    display: none;
+  }
+
+  //TOP BLUE BAR
+  .top-page-navbar {
+    position: fixed;
+    top: 78px;
+    width: 100%;
+    z-index: 100;
+    //TOP MENU PROFILE EDIT
+    .top-page-menu {
+      // border: 1rem solid red;
+      width: 100%;
+      background-color: $cg-secondary;
+      border-bottom: 2px solid lighten($color: gray, $amount: 35%);
+
+      .menu-title {
+        padding-right: 2rem;
+        padding-left: 2rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: white;
+      }
+    }
+  }
+
+  //TOP FILTER BAR
+  .top-filter-navbar {
+    position: fixed;
+    top: 145px;
+    width: 100%;
+    z-index: 100;
+    background-color: white;
+    //TOP MENU PROFILE EDIT
+    .top-page-menu {
+      // border: 1rem solid red;
+      width: 100%;
+      margin-bottom: -1rem;
+      border-bottom: 2px solid lighten($color: gray, $amount: 35%);
+
+      .menu-title {
+        padding-right: 2rem;
+        padding-left: 2rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: $cg-primary;
+      }
+
+      .menu-box {
+        margin-top: 1.3rem;
+        margin-left: 1rem;
+        // border: 4px dotted blue;
+        li.list-inline-item {
+          // border: 4px dotted red;
+          position: relative;
+          .img-icon {
+            position: absolute;
+            left: -30px;
+            top: -10px;
+            width: 38px;
+          }
+          .btn-text {
+            // position: absolute;
+            padding-left: 1rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+          }
+        }
+
+        a {
+          padding: 0.75rem 2rem;
+          margin-left: 1rem;
+          border: 1px solid gray;
+          border-radius: 6px;
+          color: lighten($color: $cg-primary, $amount: 10%);
+          font-size: 0.8rem;
+          font-weight: 600;
+
+          i {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  // PROFILE BODY
+  .bp-wrap {
+    margin-top: 140px;
+
+    #item-body {
+      margin-top: 90px;
+      // border: 4px dotted red;
+      position: relative;
+
+      //  LEFT COLUMN START
+      .athlete-info-box {
+        position: fixed;
+        top: 250px;
+        width: 23%;
+        @media (max-width: 1199px) {
+          width: 30%;
+        }
+        @media (max-width: 991px) {
+          position: relative;
+          width: 100%;
+        }
+      }
+
+      #item-header-avatar {
+        // border: 3px dotted greenyellow;
+        img.avatar {
+          border-radius: 50%;
+          width: 200px;
+        }
+        .athlete-title {
+          font-size: 1.8rem;
+          text-transform: uppercase !important;
+          margin: 0;
+          margin-top: 0.5rem;
+        }
+      }
+
+      .athlete-meta {
+        // border: 3px dotted greenyellow;
+        font-weight: 600;
+        i.fa-eye {
+          font-size: 1.2rem;
+          color: deepskyblue;
+        }
+        i.fa-star {
+          font-size: 1.2rem;
+          color: orange;
+        }
+      }
+      // AHTLETE PROFILE
+      .athlete-bio {
+        // border: 3px dotted greenyellow;
+        .list-group-item {
+          // border: 4px dotted red;
+          background-color: lighten($color: #e7e7e7, $amount: 8%);
+          border-bottom: 4px solid white;
+          border-top: 1px solid white;
+          border-right: 1px solid white;
+          border-left: 1px solid white;
+        }
+      }
+
+      // COACH PROFILE
+      .coach-bio {
+        .list-group-item {
+          // border: 4px dotted red;
+          background-color: lighten($color: #e7e7e7, $amount: 8%);
+          border-bottom: 4px solid white;
+          border-top: 1px solid white;
+          border-right: 1px solid white;
+          border-left: 1px solid white;
+
+          .values {
+            font-weight: 700;
+          }
+        }
+
+        .bpxcftr-image {
+          // border: 3px dotted greenyellow;
+          width: 80px;
+        }
+        .text-only {
+          padding-top: 0.5rem;
+        }
+      }
+
+      .athlete-sports-info {
+        // border: 4px dotted blue;
+        h1 {
+          color: #024d80;
+          font-size: 1.5rem;
+          text-align: center;
+        }
+        small {
+          font-size: 1rem;
+          font-weight: 500;
+        }
+      }
+
+      //  LEFT COLUMN END
+
+      // CENTER COLUMN START
+
+      .bp-profile {
+        // border: 4px dotted red;
+        // PROFILE EDIT MENU
+        #subnav {
+          border: 2px solid $cg-secondary;
+          margin-top: 2rem;
+          background-color: $cg-primary;
+          .subnav {
+            li {
+              a {
+                color: white;
+                &:hover {
+                  background-color: lighten($color: $cg-primary, $amount: 40%);
+                }
+              }
+
+              &.current.selected {
+                a {
+                  color: $cg-secondary;
+                }
+              }
+              &.current.selected.hover {
+                color: white !important;
+              }
+            }
+          }
+        }
+
+        // PROFILE EDIT AREA
+        #profile-edit-form {
+          // border: 4px dotted blue;
+          .button-tabs.button-nav {
+            // border: 4px dotted red;
+            li {
+              border: 1px solid $cg-primary;
+              border-radius: 10px;
+              padding: 0.35rem 0.75rem;
+              margin-bottom: 0.5rem;
+            }
+            li.current {
+              background-color: $cg-primary;
+              // color: white;
+              a {
+                background-color: $cg-primary;
+                color: white;
+                padding: 0;
+              }
+            }
+          }
+        }
+
+        // PROFILE SAVE BUTTON
+        #profile-group-edit-submit {
+          border: 4px solid $cg-primary;
+          padding: 1rem 4rem;
+          margin-bottom: 2rem;
+          font-weight: 700;
+          color: #e7e7e7;
+          background-color: $cg-primary;
+
+          &:hover {
+            background-color: lighten($color: $cg-primary, $amount: 10%);
+          }
+        }
+      }
+
+      /**
+       * REMOVING THE BP DEFAULT LOOP
+       */
+      .bp-profile-loop {
+        display: none;
+      }
+
+      #top-video-section {
+        padding-bottom: 3.5rem;
+        border-bottom: 2px solid $cg-primary;
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-youtube {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+
+        .more-videos-box {
+          .video-button {
+            cursor: pointer;
+          }
+        }
+      }
+
+      #about-section {
+        // border: 0.3rem dotted limegreen;
+        padding-bottom: 3.5rem;
+        border-bottom: 2px solid $cg-primary;
+        color: lighten($color: $cg-primary, $amount: 10%);
+
+        .block-header {
+          font-size: 2rem;
+          text-transform: capitalize;
+
+          #the-name {
+            text-transform: capitalize !important;
+            // border: 1px dotted red;
+          }
+
+          // i.fa-user-circle {
+          //   color: lighten($color: $cg-primary, $amount: 20%);
+          // }
+        }
+
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%);
+        }
+      }
+
+      #sports-stats-section {
+        // border: 0.3rem dotted sienna;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
+        color: lighten($color: $cg-primary, $amount: 10%);
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-trophy {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%) !important;
+        }
+      }
+
+      #academics-section {
+        // border: 0.3rem dotted cyan;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
+
+        .block-header {
+          font-size: 2rem;
+          i {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%);
+          font-weight: 600;
+        }
+        .school-box {
+          background-color: lighten($color: #e7e7e7, $amount: 5%);
+
+          .school-name {
+            font-weight: 700;
+          }
+        }
+        .test-score-box {
+          .test-score-title {
+            font-size: 1.7rem;
+          }
+        }
+      }
+
+      #instagram-section {
+        // border: 0.3rem dotted goldenrod;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-instagram {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%);
+        }
+      }
+
+      #interview-section {
+        // border: 0.3rem dotted steelblue;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
+        color: lighten($color: $cg-primary, $amount: 10%);
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-comments {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%);
+        }
+      }
+
+      // CENTER COLUMN END
+
+      // RIGHT COLUMN START
+
+      // RIGHT COLUMN END
+    }
+  }
+
+  // 1a. ATHLETE PROFILE RIGHT EMAIL BUTTONS
+  #athlete-right-email-button {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf0404+0,ff3019+100 */
+    background: #cf0404; /* Old browsers */
+    background: -moz-linear-gradient(
+      left,
+      #cf0404 0%,
+      #ff3019 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      left,
+      #cf0404 0%,
+      #ff3019 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to right,
+      #cf0404 0%,
+      #ff3019 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf0404', endColorstr='#ff3019',GradientType=1 ); /* IE6-9 */
+
+    .btn-image {
+      width: 60px;
+      border: 1px solid red;
+    }
+    .btn-text-holder {
+      border: 1px solid red;
+      .btn-text {
+        font-size: 1rem;
+        font-weight: 700;
+        color: white;
+        padding-top: 0.5rem;
+        padding-left: 5.5rem;
+      }
+    }
+  }
+
+  #athlete-right-search-athlete-button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf0404+0,ff3019+100 */
+    background: $cg-primary; /* Old browsers */
+    background: -moz-linear-gradient(
+      left,
+      #035083 0%,
+      #0574b8 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      left,
+      #035083 0%,
+      #0574b8 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to right,
+      #035083 0%,
+      #0574b8 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035083', endColorstr='#0574b8',GradientType=1 ); /* IE6-9 */
+
+    .btn-image {
+      width: 60px;
+      border: 1px solid #035083;
+    }
+    .btn-text-holder {
+      border: 1px solid transparent;
+      .btn-text {
+        font-size: 1rem;
+        font-weight: 700;
+        color: white;
+        padding-top: 0.5rem;
+        padding-left: 5.5rem;
+      }
+    }
+  }
+  // 2a. ATHLETE VIEW COUNT BOX ON RIGHT SIDEBAR
+  #athlete-view-count-box {
+    // border: 4px dotted red;
+    .view-count-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 0;
+    }
+
+    margin-bottom: 2rem;
+    .box-content {
+      // border: 4px dotted blue;
+      box-shadow: 1px 1px 5px gray;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 1rem;
+
+      .versity-logo {
+        img {
+          width: 80px;
+          margin-top: 1rem;
+        }
+      }
+
+      .text-content {
+        padding: 0;
+        margin: 0;
+
+        .icon-text-box {
+          background-color: darken($color: #4b5ec1, $amount: 10%);
+          border: 1px solid darken($color: #4b5ec1, $amount: 10%);
+          .icon-text {
+            color: white;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 700;
+          }
+        }
+
+        .text-only-box {
+          border: 1px solid #e7e7e7;
+          background-color: #e7e7e7;
+          .text-only {
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * 2. ATHLETE & COACH INDEX
+ */
+#athlete-index {
+  // border: 4px dotted pink;
+  position: relative;
+
+  // ANIMATION SPIN
+  // .spin {
+  //   animation-name: spin;
+  //   animation-duration: 320ms;
+  //   animation-iteration-count: infinite;
+  //   animation-timing-function: linear;
+  // }
+  #ath-load-more-btn {
+    // border: 3px dotted red;
+    cursor: pointer;
+
+    &.loading {
+      cursor: default;
+
+      .asm-loading {
+        i {
+          animation-name: spin;
+          animation-duration: 320ms;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+      }
+    }
+  }
+
+  .search-menu-container {
+    // border: 4px dotted pink;
+    position: fixed;
+    top: 65px;
+    background-color: $cg-secondary;
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+
+    .subnav-search-asm,
+    .subnav-filter-asm {
+      .nav-title {
+        margin-top: 0.8rem;
+      }
+    }
+
+    .bp-dir-search-form {
+      // border: 1rem solid red;
+      margin-top: 0.7rem;
+      background-color: #e7e7e7;
+      #dir-members-search {
+        background-color: #e7e7e7;
+        outline: lighten($color: blue, $amount: 10%);
+      }
+    }
+
+    #members-order-select {
+      background-color: #e7e7e7;
+      margin-top: 0.5rem;
+    }
+  }
+
+  //TOP FILTER BAR
+  .top-filter-navbar-index {
+    // border: 1rem dotted red;
+    position: fixed;
+    top: 145px;
+    width: 100%;
+    z-index: 100;
+    background-color: white;
+    //TOP MENU PROFILE EDIT
+    .top-page-menu {
+      // border: 1rem solid red;
+      width: 100%;
+      margin-bottom: -1rem;
+      border-bottom: 2px solid lighten($color: gray, $amount: 35%);
+
+      .menu-title {
+        padding-right: 2rem;
+        padding-left: 2rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: $cg-primary;
+      }
+
+      .menu-box {
+        margin-top: 1.3rem;
+        margin-left: 1rem;
+        // border: 4px dotted blue;
+
+        .select-filter {
+          background-color: white;
+          border: 1px solid gray;
+          border-radius: 6px;
+          padding: 0.5rem;
+          color: lighten($color: $cg-primary, $amount: 10%);
+          font-size: 0.8rem;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+
+        a {
+          padding: 0.5rem 2rem;
+          margin-left: 1rem;
+          border: 1px solid gray;
+          border-radius: 6px;
+          color: lighten($color: $cg-primary, $amount: 10%);
+          font-size: 0.8rem;
+          font-weight: 600;
+
+          i {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  //TOP ADVABCED FILTER BAR
+  #top-advanced-filter {
+    // border: 1rem dotted red;
+    position: fixed;
+    top: 75px;
+    width: 100%;
+    height: 140px;
+    z-index: 100;
+    background-color: white;
+    // background-color: $cg-secondary;
+
+    //ADVANCE RESET BUTTON
+    #ath-adv-filter-reset {
+      background-color: white;
+    }
+
+    //TOP MENU PROFILE EDIT
+    .top-page-menu {
+      // border: 1rem solid red;
+      width: 100%;
+      margin-bottom: -1rem;
+      // border-bottom: 2px solid lighten($color: gray, $amount: 35%);
+
+      .top-row {
+        background-color: $cg-secondary;
+        border-bottom: $cg-secondary;
+      }
+      .bottom-row {
+        background-color: white;
+        border-bottom: 2px solid #e7e7e7;
+        .sport-title {
+          font-size: 1rem;
+        }
+      }
+
+      .menu-title {
+        padding-right: 2rem;
+        padding-left: 2rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        // color: $cg-primary;
+      }
+
+      .menu-box {
+        margin-top: 1.3rem;
+        margin-left: 1rem;
+        // border: 4px dotted blue;
+
+        .select-filter {
+          background-color: white;
+          border: 1px solid gray;
+          border-radius: 6px;
+          padding: 0.5rem;
+          color: lighten($color: $cg-primary, $amount: 10%);
+          font-size: 0.8rem;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+
+        a {
+          padding: 0.5rem 2rem;
+          margin-left: 1rem;
+          border: 1px solid gray;
+          border-radius: 6px;
+          color: lighten($color: $cg-primary, $amount: 10%);
+          font-size: 0.8rem;
+          font-weight: 600;
+
+          i {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  // MAIN PAGE CONTENT
+  .asm-index-page-content {
+    // border: 1rem dotted red;
+    margin-top: 65px;
+    position: relative;
+
+    .no-data-found {
+      position: absolute;
+      // border: 3px dotted pink;
+      left: 20%;
+      top: 90px;
+
+      .no-data-title {
+        font-size: 1.2rem;
+        padding-top: 2rem;
+      }
+    }
+
+    .bp-feedback.bp-messages.info {
+      margin-bottom: 1rem;
+    }
+  }
+
+  #athlete-index-container {
+    // border: 4px solid blue;
+    padding: 0rem 5rem;
+    .bp-pagination {
+      .pag-data {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: $cg-primary;
+      }
+    }
+
+    .item-entry-asm {
+      // border: 4px solid red;
+      background-color: white;
+      margin-bottom: 2rem;
+      box-shadow: 2px 2px 12px lighten($color: gray, $amount: 15%);
+
+      .item-avatar-asm {
+        padding-left: 0.5rem;
+        width: 250px;
+      }
+    }
+
+    .bp-pagination {
+      // border: 1rem dotted red;
+      padding-left: 1rem;
+
+      .bp-pagination-links.top {
+        display: none;
+      }
+    }
+
+    .item-asm {
+      // margin-bottom: 1rem;
+      // border: 3px dotted red;
+      .status-bar {
+        // border: 3px dotted blue;
+        padding-right: 2rem;
+        margin-top: -2.5rem;
+
+        .verified-status {
+          padding-right: 1rem;
+          font-size: 0.8rem;
+          font-weight: 600;
+          color: $cg-primary;
+
+          .fa-check-circle {
+            color: lighten($color: $cg-primary, $amount: 25%);
+          }
+          .fa-times-circle {
+            color: red;
+          }
+        }
+
+        .available-status {
+          font-size: 0.8rem;
+          font-weight: 600;
+          text-transform: uppercase;
+
+          .available {
+            color: green;
+          }
+          .committed {
+            color: red;
+          }
+        }
+      }
+
+      .item-block-asm {
+        // border: 3px dotted red;
+        padding-left: 1.5rem;
+
+        .member-name {
+          // border: 3px dotted red;
+          font-weight: 600;
+          font-size: 1.5rem;
+          a {
+            color: $cg-primary;
+          }
+          small {
+            font-size: 1rem;
+            font-weight: 700;
+          }
+        }
+
+        .info-bar {
+          // border: 3px dotted red;
+          .list-inline-item {
+            font-size: 1rem;
+            font-weight: 700;
+            color: lighten($color: $cg-primary, $amount: 10%);
+
+            .fas {
+              // border: 3px dotted red;
+              color: lighten($color: $cg-primary, $amount: 35%) !important;
+            }
+          }
+        }
+
+        .text-content {
+          font-size: 0.9rem;
+          padding-right: 2rem;
+          color: $cg-primary;
+
+          .readmore {
+            float: right;
+            a {
+              font-size: 1rem;
+              font-weight: 600;
+              color: lighten($color: $cg-primary, $amount: 0%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * 3. BP GLOBAL SEARCH INDEX
+ */
+#buddypress {
+  .bboss_search_page {
+    position: relative;
+
+    .search-menu-container {
+      // border: 4px dotted pink;
+      position: fixed;
+      top: 65px;
+      background-color: $cg-secondary;
+      width: 100%;
+      height: 80px;
+      z-index: 100;
+
+      .bboss_search_filters_wrapper {
+        // border: 3px dotted yellow;
+        .search_filters {
+          margin-top: 1.5rem;
+          margin-left: 1rem;
+        }
+
+        ul {
+          li {
+            a {
+              color: lighten($color: $cg-primary, $amount: 30%);
+            }
+          }
+
+          li.active {
+            a {
+              background: lighten($color: #e6e6e6, $amount: 0%);
+            }
+          }
+        }
+      }
+
+      .bboss_search_form_wrapper {
+        // width: 500px;
+        .search-form {
+          margin-top: -1.5rem;
+          margin-right: 1rem;
+          width: 350px !important;
+          .search-field {
+            // border: 5px dotted limegreen;
+            width: 350px !important;
+          }
+          .search-submit {
+            border: 5px dotted red;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  #athlete-index-container {
+    // border: 4px dotted hotpink;
+    margin-top: -2.5rem;
+  }
+
+  /**
+   * Global Search Member
+   */
+  .search_results {
+    #members-stream {
+      .item-entry-asm {
+        box-shadow: 2px 2px 6px #e7e7e7;
+
+        .item-avatar-asm {
+          margin-bottom: -1.5rem;
+          margin-left: 1rem;
+          img {
+            width: 100% !important;
+            height: auto !important;
+          }
+        }
+        .item-asm {
+          .item-block-asm {
+            .member-name {
+              font-weight: 600;
+              a {
+                color: $cg-primary;
+              }
+            }
+
+            .info-bar {
+              // border: 3px dotted red;
+              .list-inline-item {
+                font-size: 1rem;
+                font-weight: 700;
+                color: lighten($color: $cg-primary, $amount: 10%);
+              }
+            }
+
+            .text-content {
+              padding-right: 2rem;
+              color: $cg-primary;
+
+              .readmore {
+                a {
+                  color: lighten($color: $cg-primary, $amount: 20%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /**
+   * Global Search Posts
+   */
+  .results-group-title {
+    display: none;
+  }
+
+  .bboss_search_item.bboss_search_item_post {
+    // border: 1rem dotted red;
+    box-shadow: 2px 2px 6px #e7e7e7;
+    margin-left: 2rem;
+    margin-right: 1rem;
+
+    .entry-title {
+      padding: 0 2rem;
+
+      a {
+        color: $cg-primary;
+
+        &:hover {
+          color: lighten($color: $cg-primary, $amount: 10%);
+        }
+      }
+    }
+
+    .entry-content {
+      padding: 0 2rem;
+
+      a.moretag {
+        color: lighten($color: $cg-primary, $amount: 20%);
+
+        &:hover {
+          color: lighten($color: $cg-primary, $amount: 30%);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * 4. BP REGISTRATION PAGE
+ */
+
+#asm-registration-pg {
+  // border: 1rem dotted red;
+  margin-top: -4.2rem;
+  padding: 5rem;
+  background: url('/wp-content/uploads/Group-236.png');
+
+  #register-page {
+    // border: 1rem dotted dodgerblue;
+    border-radius: 30px;
+    padding: 2rem;
+    background-color: rgba($color: #e7e7e7, $alpha: 0.9);
+    // background-color: lighten($color: #e7e7e7, $amount: 0);
+
+    .layout-wrap {
+      // border: 1rem dotted dodgerblue;
+      .description {
+        padding: 1.5rem;
+        border-radius: 20px;
+      }
+    }
+
+    #submit {
+      background-color: lighten($color: $cg-primary, $amount: 10%);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+    }
+  }
+}
+
+.buddypress-wrap .standard-form input[required]:invalid,
+.buddypress-wrap .standard-form select[required]:invalid,
+.buddypress-wrap .standard-form textarea[required]:invalid {
+  border-color: transparent !important;
+}
