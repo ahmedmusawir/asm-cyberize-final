@@ -30,13 +30,15 @@ class UniversityFiltersParent {
     // console.log('doc mouse up');
     // const dropDownBox = $('#menu-university-menu');
     if (!this.dropDownBox.is(e.target)) {
-      this.dropDownBox.removeClass('is-active');
+      // this.dropDownBox.removeClass('is-active');
+      this.dropDownBox.addClass('d-none');
     }
   };
 
   locationDropdownIn = (e) => {
     console.log('location btn clicked');
-    this.dropDownBox.addClass('is-active');
+    // this.dropDownBox.addClass('is-active row');
+    this.dropDownBox.removeClass('d-none');
   };
 
   locationDropdownOut = (e) => {

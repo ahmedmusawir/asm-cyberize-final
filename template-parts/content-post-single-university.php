@@ -296,7 +296,7 @@
 
     <!-- MOST VIEWED ATHLETE SECTION -->
 
-    <section id="most-viewed-athlete">
+    <section id="most-viewed-athlete" class="d-none">
 
       <div class="container-fluid">
         <h2 class="block-title text-center">Most Viewed Athletes </h2>

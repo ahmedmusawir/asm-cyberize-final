@@ -23,15 +23,6 @@
         <section class="top-page-menu clearfix">
           <h3 class="menu-title float-left">Filters</h3>
 
-          <!-- WP LOCATION MENU START -->
-
-          <?php
-              wp_nav_menu( array( 
-                'theme_location' => 'univ-cat', 
-                'container_class' => 'menu-box' ) ); 
-            ?>
-
-          <!-- WP LOCATION MENU END -->
 
           <ul class="list-inline menu-box">
 
@@ -104,6 +95,18 @@
       </div>
 
       <!-- TOP FILTER BAR END-->
+
+      <!-- WP LOCATION MENU START -->
+
+      <?php
+        wp_nav_menu( array( 
+          'theme_location' => 'univ-cat', 
+          'container_class' => 'location-menu-box container-fluid',
+          'menu_class' => 'row d-none animated bounceInDown'
+        ) ); 
+      ?>
+
+      <!-- WP LOCATION MENU END -->
 
 
       <section class="container-fluid">
