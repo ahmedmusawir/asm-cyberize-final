@@ -14,7 +14,9 @@
 <footer id="footer-asm" class="site-footer">
 
   <section class="footer-header text-center">
-    <img src="/wp-content/themes/asm-buddypress-cyberize/assets/img/ASM-logo.png" alt="">
+    <!-- <img src="/wp-content/themes/asm-buddypress-cyberize/assets/img/ASM-logo.png" alt=""> -->
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ASM-logo.png" alt="">
+
     <h2 class="footer-title">Recruiting Starts Here ...</h2>
   </section>
 

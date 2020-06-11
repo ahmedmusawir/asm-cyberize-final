@@ -3969,6 +3969,11 @@ class AdvanceFiltersParent {
       setTimeout(function () {
         $(`.${sport}.${A}.${G}.${I}`).removeClass('d-none');
       });
+    } else if (A != 'all' && H != 'all' && I != 'all') {
+      theItem.addClass('d-none');
+      setTimeout(function () {
+        $(`.${sport}.${A}.${H}.${I}`).removeClass('d-none');
+      });
     } else if (B != 'all' && C != 'all' && I != 'all') {
       theItem.addClass('d-none');
       setTimeout(function () {
