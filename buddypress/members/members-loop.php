@@ -150,6 +150,37 @@ bp_nouveau_before_loop(); ?>
 
     endif; 
 
+    if ($sport == 'FIELD-HOCKEY') : 
+
+        $field_hockey_position = xprofile_get_field_data( 1779, $user_id, $multi_format = 'array' );
+
+    else :
+
+      $field_hockey_position = '';
+
+    endif; 
+
+    if ($sport == 'GYMNASTICS') : 
+
+        $gymnastics_disciplines = xprofile_get_field_data( 200, $user_id, $multi_format = 'array' );
+
+    else :
+
+        $gymnastics_disciplines = '';
+
+    endif; 
+
+
+    if ($sport == 'ICE-HOCKEY') : 
+
+        $ice_hockey_position = xprofile_get_field_data( 151, $user_id, $multi_format = 'array' );
+
+    else :
+
+        $ice_hockey_position = '';
+
+    endif; 
+
     
     
     ?>
@@ -157,7 +188,10 @@ bp_nouveau_before_loop(); ?>
     <li <?php bp_member_class( 
         array( 'item-entry-asm', "$sport", "$gender", "$availability", "$verify_filter", "$enrollment_year", "$nationality",
         "$us_football_position",
+        "$field_hockey_position",
         "$cheerleading_position",
+        "$gymnastics_disciplines",
+        "$ice_hockey_position",
         "$baseball_primary_position", "$baseball_secondary_position",
         "$softball_primary_position", "$softball_secondary_position",
         "$basketball_preferred_hand", "$basketball_primary_position", "$basketball_secondary_position",

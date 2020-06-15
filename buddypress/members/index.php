@@ -113,15 +113,9 @@
             </li>
           </a>
 
-          <!-- <a class="moose-item" href="#" id="athAdvancFilter" data-toggle="modal" data-target="#filterSwitchModal">
-            <li class="list-inline-item">
-              <span class="btn-text">ADVANCE FILTERS</span>
-            </li>
-          </a> -->
-
           <a class="moose-item" href="#" id="athAdvanceFilter" data-toggle="modal">
             <li class="list-inline-item">
-              <span class="btn-text">ADVANCE FILTERS</span>
+              <span class="btn-text">OTHER FILTERS</span>
             </li>
           </a>
 
@@ -489,7 +483,7 @@
 
               <li class="list-inline-item">
 
-                <select class="select-filter" id="position-GYMNASTICS">
+                <select class="select-filter" id="discipline-GYMNASTICS">
 
                   <option value="all">Disciplines</option>
                   <option value="Vault">Vault</option>

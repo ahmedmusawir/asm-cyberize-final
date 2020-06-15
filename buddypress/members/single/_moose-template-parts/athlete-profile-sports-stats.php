@@ -250,6 +250,7 @@ $sport = xprofile_get_field_data( 49, $user_id, $multi_format = 'array' );
         <?php 
         // FIELD HOCKY
         $field_hockey_team_name = xprofile_get_field_data( 185, $user_id, $multi_format = 'array' );
+        $field_hockey_position = xprofile_get_field_data( 1779, $user_id, $multi_format = 'array' );
         ?>
 
         <tr>

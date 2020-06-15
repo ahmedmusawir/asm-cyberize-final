@@ -46,6 +46,15 @@ class AdvGenderFiltersSelect extends AdvanceFiltersParent {
     const positionPrimaryBaseball = $('#position-primary-baseball').val();
     const positionSecondaryBaseball = $('#position-secondary-baseball').val();
 
+    // FIELD-HOCKEY
+    const positionFieldHockey = $('#position-FIELD-HOCKEY').val();
+
+    // GYMNASTICS
+    const disciplineGymnastics = $('#discipline-GYMNASTICS').val();
+
+    // ICE-HOCKEY
+    const positionIceHockey = $('#position-ICE-HOCKEY').val();
+
     // CLICKED CURRENT SELECT FILTER
     const gender = $('#gender-select-adv').val();
     const theItem = $('.item-entry-asm');
@@ -129,7 +138,49 @@ class AdvGenderFiltersSelect extends AdvanceFiltersParent {
         );
         // code block
         break;
-      case 'LATER':
+      case 'FIELD-HOCKEY':
+        console.log(`Sport Filters for ${sport}`);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          gender,
+          avail,
+          classYr,
+          location,
+          verify,
+          positionFieldHockey
+        );
+        // code block
+        break;
+      case 'GYMNASTICS':
+        console.log(`Sport Filters for ${sport}`);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          gender,
+          avail,
+          classYr,
+          location,
+          verify,
+          disciplineGymnastics
+        );
+        // code block
+        break;
+      case 'ICE-HOCKEY':
+        console.log(`Sport Filters for ${sport}`);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          gender,
+          avail,
+          classYr,
+          location,
+          verify,
+          positionIceHockey
+        );
+        // code block
+        break;
+      case 'PLACEHOLDER':
         console.log(`Sport Filters for ${sport}`);
         this.applyAdvFilters(
           theItem,

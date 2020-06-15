@@ -52,6 +52,45 @@ class AdvanceFiltersParent {
   applyAdvFilters = (theItem, sport, A, B, C, D, E, F, G, H, I) => {
     // applyAdvFilters = (...arguments) => { //DOESN'T WORK
     // console.log('Adv filter theItem: ' + theItem);
+    // console.log(sport);
+    // console.log(A);
+    // console.log(B);
+    // console.log(C);
+    // console.log(D);
+    // console.log(E);
+    // console.log(F);
+    // console.log(G);
+    // console.log(H);
+    // console.log(I);
+
+    if (A == undefined) {
+      A = 'all';
+    }
+    if (B == undefined) {
+      B = 'all';
+    }
+    if (C == undefined) {
+      C = 'all';
+    }
+    if (D == undefined) {
+      D = 'all';
+    }
+    if (E == undefined) {
+      E = 'all';
+    }
+    if (F == undefined) {
+      F = 'all';
+    }
+    if (G == undefined) {
+      G = 'all';
+    }
+    if (H == undefined) {
+      H = 'all';
+    }
+    if (I == undefined) {
+      I = 'all';
+    }
+
     console.log(sport);
     console.log(A);
     console.log(B);
