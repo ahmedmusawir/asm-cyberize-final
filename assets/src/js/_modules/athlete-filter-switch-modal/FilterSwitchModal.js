@@ -90,6 +90,8 @@ class FilterSwitchModal {
   loadSportsBasedFilters(sport) {
     $('.menu-box-sports').addClass('d-none');
 
+    // console.log(sport);
+
     switch (sport) {
       case 'US-FOOTBALL':
         // console.log(`Sport Filters for ${sport}`);
@@ -116,7 +118,68 @@ class FilterSwitchModal {
         $(`.menu-box-${sport}`).removeClass('d-none');
         // code block
         break;
-      case 'LATER':
+      case 'FIELD-HOCKEY':
+        // console.log(`Sport Filters for ${sport}`);
+        $(`.menu-box-${sport}`).removeClass('d-none');
+        // code block
+        break;
+      case 'GYMNASTICS':
+        // console.log(`Sport Filters for ${sport}`);
+        $(`.menu-box-${sport}`).removeClass('d-none');
+        // code block
+        break;
+      case 'ICE-HOCKEY':
+        // console.log(`Sport Filters for ${sport}`);
+        $(`.menu-box-${sport}`).removeClass('d-none');
+        // code block
+        break;
+      case 'LACROSSE':
+        // console.log(`Sport Filters for ${sport}`);
+        $(`.menu-box-${sport}`).removeClass('d-none');
+        // code block
+        break;
+      case 'ROWING':
+        // console.log(`Sport Filters for ${sport}`);
+        $(`.menu-box-${sport}`).removeClass('d-none');
+        // code block
+        break;
+      case 'RUGBY':
+        // console.log(`Sport Filters for ${sport}`);
+        $(`.menu-box-${sport}`).removeClass('d-none');
+        // code block
+        break;
+      case 'SOCCER':
+        // console.log(`Sport Filters for ${sport}`);
+        $(`.menu-box-${sport}`).removeClass('d-none');
+        // code block
+        break;
+      case 'SOFTBALL':
+        // console.log(`Sport Filters for ${sport}`);
+        $(`.menu-box-${sport}`).removeClass('d-none');
+        // code block
+        break;
+      case 'SWIMMING-AND-DIVING':
+        // console.log(`Sport Filters for ${sport}`);
+        $(`.menu-box-${sport}`).removeClass('d-none');
+        // code block
+        break;
+      case 'VOLLEYBALL':
+        // console.log(`Sport Filters for ${sport}`);
+        $(`.menu-box-${sport}`).removeClass('d-none');
+        // code block
+        break;
+      case 'TRACK-AND-FIELD':
+        // console.log(`Sport Filters for ${sport}`);
+        $(`.menu-box-${sport}`).removeClass('d-none');
+        // code block
+        break;
+      case 'WATER-POLO':
+        // console.log(`Sport Filters for ${sport}`);
+        $(`.menu-box-${sport}`).removeClass('d-none');
+        // code block
+        break;
+
+      case 'TENNIS':
         // console.log(`Sport Filters for ${sport}`);
         $(`.menu-box-${sport}`).removeClass('d-none');
         // code block
