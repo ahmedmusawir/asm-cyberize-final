@@ -30,18 +30,22 @@ class AdvGenderFiltersSelect extends AdvanceFiltersParent {
 
     // US FOOTBALL FILTER
     const positionUsFootball = $('#position-us-football').val();
+
     // CHEERLEADING FILTER
     const positionCheerleading = $('#position-cheerleading').val();
+
     // GOLF FILTERS
     const positionGolf = $('#position-golf').val();
     const wagrGolf = $('#wagr-golf').val();
     const nationalRankingGolf = $('#national-ranking-golf').val();
     const swingHandGolf = $('#swing-hand-golf').val();
+
     // BASKETBALL FILTERS
     const positionPrimaryBasketball = $('#position-primary-basketball').val();
     const positionSecondaryBasketball = $(
       '#position-secondary-basketball'
     ).val();
+
     // BASEBALL FILTERS
     const positionPrimaryBaseball = $('#position-primary-baseball').val();
     const positionSecondaryBaseball = $('#position-secondary-baseball').val();
@@ -54,6 +58,43 @@ class AdvGenderFiltersSelect extends AdvanceFiltersParent {
 
     // ICE-HOCKEY
     const positionIceHockey = $('#position-ICE-HOCKEY').val();
+
+    // LACROSSE
+    const positionLacrosse = $('#position-LACROSSE').val();
+
+    // ROWING
+    const positionRowing = $('#position-ROWING').val();
+
+    // RUGBY
+    const positionRugby = $('#position-RUGBY').val();
+
+    // SOCCER
+    const positionSoccer = $('#position-SOCCER').val();
+
+    // SOFTBALL
+    const positionPrimarySoftball = $('#position-primary-SOFTBALL').val();
+    const positionSecondarySoftball = $('#position-secondary-SOFTBALL').val();
+
+    // SWIMMING
+    const mainEventSwimming = $('#main-event-SWIMMING-AND-DIVING').val();
+    const secondaryEventSwimming = $(
+      '#secondary-event-SWIMMING-AND-DIVING'
+    ).val();
+
+    // TENNIS
+    const utrTennis = $('#utr-TENNIS').val();
+    const itfTennis = $('#itf-TENNIS').val();
+    const handTennis = $('#hand-TENNIS').val();
+    const nationalRankingTennis = $('#ranking-TENNIS').val();
+
+    // TRACK & FIELD
+    const positionTrackAndField = $('#position-TRACK-AND-FIELD').val();
+
+    // VOLLEYBALL
+    const positionVolleyball = $('#position-VOLLEYBALL').val();
+
+    // WATER POLO
+    const positionWaterPolo = $('#position-WATER-POLO').val();
 
     // CLICKED CURRENT SELECT FILTER
     const gender = $('#gender-select-adv').val();
@@ -180,7 +221,7 @@ class AdvGenderFiltersSelect extends AdvanceFiltersParent {
         );
         // code block
         break;
-      case 'PLACEHOLDER':
+      case 'LACROSSE':
         console.log(`Sport Filters for ${sport}`);
         this.applyAdvFilters(
           theItem,
@@ -189,7 +230,139 @@ class AdvGenderFiltersSelect extends AdvanceFiltersParent {
           avail,
           classYr,
           location,
-          verify
+          verify,
+          positionLacrosse
+        );
+        // code block
+        break;
+      case 'ROWING':
+        console.log(`Sport Filters for ${sport}`);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          gender,
+          avail,
+          classYr,
+          location,
+          verify,
+          positionRowing
+        );
+        // code block
+        break;
+      case 'RUGBY':
+        console.log(`Sport Filters for ${sport}`);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          gender,
+          avail,
+          classYr,
+          location,
+          verify,
+          positionRugby
+        );
+        // code block
+        break;
+      case 'SOCCER':
+        console.log(`Sport Filters for ${sport}`);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          gender,
+          avail,
+          classYr,
+          location,
+          verify,
+          positionSoccer
+        );
+        // code block
+        break;
+      case 'SOFTBALL':
+        console.log(`Sport Filters for ${sport}`);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          gender,
+          avail,
+          classYr,
+          location,
+          verify,
+          positionPrimarySoftball,
+          positionSecondarySoftball
+        );
+        // code block
+        break;
+      case 'SWIMMING-AND-DIVING':
+        console.log(`Sport Filters for ${sport}`);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          gender,
+          avail,
+          classYr,
+          location,
+          verify,
+          mainEventSwimming,
+          secondaryEventSwimming
+        );
+        // code block
+        break;
+      case 'TENNIS':
+        console.log(`Sport Filters for ${sport}`);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          gender,
+          avail,
+          classYr,
+          location,
+          verify,
+          utrTennis,
+          itfTennis,
+          handTennis,
+          nationalRankingTennis
+        );
+        // code block
+        break;
+      case 'TRACK-AND-FIELD':
+        console.log(`Sport Filters for ${sport}`);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          gender,
+          avail,
+          classYr,
+          location,
+          verify,
+          positionTrackAndField
+        );
+        // code block
+        break;
+      case 'VOLLEYBALL':
+        console.log(`Sport Filters for ${sport}`);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          gender,
+          avail,
+          classYr,
+          location,
+          verify,
+          positionVolleyball
+        );
+        // code block
+        break;
+      case 'WATER-POLO':
+        console.log(`Sport Filters for ${sport}`);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          gender,
+          avail,
+          classYr,
+          location,
+          verify,
+          positionWaterPolo
         );
         // code block
         break;

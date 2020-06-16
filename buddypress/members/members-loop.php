@@ -152,7 +152,7 @@ bp_nouveau_before_loop(); ?>
 
     if ($sport == 'FIELD-HOCKEY') : 
 
-        $field_hockey_position = xprofile_get_field_data( 1779, $user_id, $multi_format = 'array' );
+      $field_hockey_position = xprofile_get_field_data( 1779, $user_id, $multi_format = 'array' );
 
     else :
 
@@ -162,26 +162,129 @@ bp_nouveau_before_loop(); ?>
 
     if ($sport == 'GYMNASTICS') : 
 
-        $gymnastics_disciplines = xprofile_get_field_data( 200, $user_id, $multi_format = 'array' );
+      $gymnastics_disciplines = xprofile_get_field_data( 200, $user_id, $multi_format = 'array' );
 
     else :
 
-        $gymnastics_disciplines = '';
+      $gymnastics_disciplines = '';
 
     endif; 
 
 
     if ($sport == 'ICE-HOCKEY') : 
 
-        $ice_hockey_position = xprofile_get_field_data( 151, $user_id, $multi_format = 'array' );
+      $ice_hockey_position = xprofile_get_field_data( 151, $user_id, $multi_format = 'array' );
 
     else :
 
         $ice_hockey_position = '';
 
     endif; 
-
     
+
+    if ($sport == 'LACROSSE') : 
+
+      $lacrosse_position = xprofile_get_field_data( 145, $user_id, $multi_format = 'array' );
+
+    else :
+
+      $lacrosse_position = '';
+
+    endif;     
+
+    if ($sport == 'ROWING') : 
+
+      $rowing_position = xprofile_get_field_data( 142, $user_id, $multi_format = 'array' );
+
+    else :
+
+      $rowing_position = '';
+
+    endif;  
+
+    if ($sport == 'RUGBY') : 
+
+      $rugby_position = xprofile_get_field_data( 193, $user_id, $multi_format = 'array' );
+
+    else :
+
+      $rugby_position = '';
+
+    endif;  
+
+
+    if ($sport == 'SOCCER') : 
+
+      $soccer_position = xprofile_get_field_data( 139, $user_id, $multi_format = 'array' );
+
+    else :
+
+      $soccer_position = '';
+
+    endif;  
+
+
+    if ($sport == 'SWIMMING-AND-DIVING') : 
+
+      $swimming_main_event_style = xprofile_get_field_data( 309, $user_id, $multi_format = 'array' );
+      $swimming_secondary_event_style = xprofile_get_field_data( 310, $user_id, $multi_format = 'array' );
+
+    else :
+
+      $swimming_main_event_style = '';
+      $swimming_secondary_event_style = '';
+
+    endif;  
+
+
+    if ($sport == 'TENNIS') : 
+
+      $tennis_utr = xprofile_get_field_data( 311, $user_id, $multi_format = 'array' );
+      $tennis_itf = xprofile_get_field_data( 312, $user_id, $multi_format = 'array' );
+      $tennis_preferred_hand = xprofile_get_field_data( 313, $user_id, $multi_format = 'array' );
+      $tennis_national_ranking = xprofile_get_field_data( 316, $user_id, $multi_format = 'array' );
+
+    else :
+
+      $tennis_utr = '';
+      $tennis_itf = '';
+      $tennis_preferred_hand = '';
+      $tennis_national_ranking = '';
+
+    endif;  
+
+
+    if ($sport == 'TRACK-AND-FIELD') : 
+
+      $track_field_discipline = xprofile_get_field_data( 323, $user_id, $multi_format = 'array' );
+
+    else :
+
+      $track_field_discipline = '';
+
+    endif;  
+
+
+    if ($sport == 'VOLLEYBALL') : 
+
+      $volleyball_position = xprofile_get_field_data( 148, $user_id, $multi_format = 'array' );
+
+    else :
+
+      $volleyball_position = '';
+
+    endif;  
+
+
+    if ($sport == 'WATER-POLO') : 
+
+      $water_polo_position = xprofile_get_field_data( 191, $user_id, $multi_format = 'array' );
+
+    else :
+
+      $water_polo_position = '';
+
+    endif;  
     
     ?>
 
@@ -192,10 +295,20 @@ bp_nouveau_before_loop(); ?>
         "$cheerleading_position",
         "$gymnastics_disciplines",
         "$ice_hockey_position",
+        "$lacrosse_position",
+        "$water_polo_position",
+        "$volleyball_position",
+        "$track_field_discipline",
+        "$soccer_position",
+        "$rugby_position",
+        "$rowing_position",
+        "$swimming_main_event_style", "$swimming_secondary_event_style",
+        "$tennis_utr", "$tennis_itf", "$tennis_preferred_hand", "$tennis_national_ranking",
         "$baseball_primary_position", "$baseball_secondary_position",
         "$softball_primary_position", "$softball_secondary_position",
         "$basketball_preferred_hand", "$basketball_primary_position", "$basketball_secondary_position",
-        "$golf_handicap", "$golf_wagr", "$golf_national_ranking", "$golf_preferred_hand", 'animated', 'bounceIn' ) 
+        "$golf_handicap", "$golf_wagr", "$golf_national_ranking", "$golf_preferred_hand", 
+        'animated', 'bounceIn' ) 
         ); 
       ?> data-bp-item-id="<?php bp_member_user_id(); ?>" data-bp-item-component="members">
       <div class="list-wrap-asm row">
