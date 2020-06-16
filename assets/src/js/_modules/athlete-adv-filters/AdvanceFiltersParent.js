@@ -4300,10 +4300,58 @@ class AdvanceFiltersParent {
       setTimeout(function () {
         $(`.${sport}.${H}.${I}`).removeClass('d-none');
       });
-    } else {
+    } else if (A != 'all') {
+      console.log(`THIS IS FROM A ...  .${sport}.${A}`);
       theItem.addClass('d-none');
       setTimeout(function () {
         $(`.${sport}.${A}`).removeClass('d-none');
+      });
+    } else if (B != 'all') {
+      console.log('THIS IS FROM B ...');
+      theItem.addClass('d-none');
+      setTimeout(function () {
+        $(`.${sport}.${B}`).removeClass('d-none');
+      });
+    } else if (C != 'all') {
+      theItem.addClass('d-none');
+      setTimeout(function () {
+        $(`.${sport}.${C}`).removeClass('d-none');
+      });
+    } else if (D != 'all') {
+      theItem.addClass('d-none');
+      setTimeout(function () {
+        $(`.${sport}.${D}`).removeClass('d-none');
+      });
+    } else if (E != 'all') {
+      theItem.addClass('d-none');
+      setTimeout(function () {
+        $(`.${sport}.${E}`).removeClass('d-none');
+      });
+    } else if (F != 'all') {
+      theItem.addClass('d-none');
+      setTimeout(function () {
+        $(`.${sport}.${F}`).removeClass('d-none');
+      });
+    } else if (G != 'all') {
+      theItem.addClass('d-none');
+      setTimeout(function () {
+        $(`.${sport}.${G}`).removeClass('d-none');
+      });
+    } else if (H != 'all') {
+      theItem.addClass('d-none');
+      setTimeout(function () {
+        $(`.${sport}.${H}`).removeClass('d-none');
+      });
+    } else if (I != 'all') {
+      theItem.addClass('d-none');
+      setTimeout(function () {
+        $(`.${sport}.${I}`).removeClass('d-none');
+      });
+    } else {
+      console.log('THIS IS FROM ELSE...');
+      theItem.addClass('d-none');
+      setTimeout(function () {
+        $(`.${sport}`).removeClass('d-none');
       });
     }
   };

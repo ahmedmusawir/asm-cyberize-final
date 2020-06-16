@@ -1,18 +1,18 @@
 import $ from 'jquery';
 import AdvanceFiltersParent from './AdvanceFiltersParent';
 
-class AdvGenderFiltersSelect extends AdvanceFiltersParent {
+class AdvAvailFiltersSelect extends AdvanceFiltersParent {
   constructor() {
     super();
     this.init();
 
     // COLLECTING SELECT
-    this.selectGender = $('#gender-select-adv');
+    this.selectGender = $('#avail-select-adv');
     this.setEvents();
   }
 
   init = () => {
-    console.log('ASM Gender Filter Init');
+    console.log('ASM Adv Avail Filter Init');
   };
 
   setEvents = () => {
@@ -109,8 +109,8 @@ class AdvGenderFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,
@@ -123,8 +123,8 @@ class AdvGenderFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,
@@ -373,4 +373,4 @@ class AdvGenderFiltersSelect extends AdvanceFiltersParent {
   }
 }
 
-export default AdvGenderFiltersSelect;
+export default AdvAvailFiltersSelect;
