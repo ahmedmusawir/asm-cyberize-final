@@ -138,8 +138,8 @@ class AdvAvailFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,
@@ -153,8 +153,8 @@ class AdvAvailFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,
@@ -167,8 +167,8 @@ class AdvAvailFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,
@@ -184,8 +184,8 @@ class AdvAvailFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,
@@ -198,8 +198,8 @@ class AdvAvailFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,
@@ -212,8 +212,8 @@ class AdvAvailFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,
@@ -226,8 +226,8 @@ class AdvAvailFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,
@@ -240,8 +240,8 @@ class AdvAvailFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,
@@ -254,8 +254,8 @@ class AdvAvailFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,
@@ -268,8 +268,8 @@ class AdvAvailFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,
@@ -282,8 +282,8 @@ class AdvAvailFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,
@@ -297,8 +297,8 @@ class AdvAvailFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,
@@ -312,8 +312,8 @@ class AdvAvailFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,
@@ -329,8 +329,8 @@ class AdvAvailFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,
@@ -343,8 +343,8 @@ class AdvAvailFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,
@@ -357,8 +357,8 @@ class AdvAvailFiltersSelect extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
           avail,
+          gender,
           classYr,
           location,
           verify,

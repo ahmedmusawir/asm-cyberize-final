@@ -4,9 +4,11 @@ THE ADVANCE FILTERS
 */
 import $ from 'jquery';
 import Bootstrap from 'bootstrap';
+import AdvanceFiltersParent from '../athlete-adv-filters/AdvanceFiltersParent';
 
-class FilterSwitchModal {
+class FilterSwitchModal extends AdvanceFiltersParent {
   constructor() {
+    super();
     // COLLECTING BUTTON
     this.modalBtn = $('#athAdvanceFilter');
     this.radioBtnBox = $('#modalSportsChoiceBox');
@@ -89,6 +91,7 @@ class FilterSwitchModal {
 
   loadSportsBasedFilters(sport) {
     $('.menu-box-sports').addClass('d-none');
+    super.resetFilters();
 
     // console.log(sport);
 
