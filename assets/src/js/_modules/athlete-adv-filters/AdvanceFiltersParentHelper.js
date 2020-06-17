@@ -11,7 +11,10 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
     console.log('Parent Helper...');
   };
 
-  getSports = () => {
+  getSports = (filterName) => {
+    console.log(`Filter Name: ${filterName}`);
+    let filterArray;
+
     // BASE FILTERS
     const sport = $('.menu-title.sport-title').text();
     const avail = $('#avail-select-adv').val();
@@ -20,6 +23,24 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
     const verify = $('#verify-select-adv').val();
     const gender = $('#gender-select-adv').val();
     const theItem = $('.item-entry-asm');
+
+    // FILTERS ORGANIZED FOR SELECT CLICK IMPACT FOR EXAMPLE:
+    // gender NEEDS TO BE AT THE BEGINNING WHEN gender SELECT FILTER IS CLICKED
+    if (filterName == 'gender') {
+      filterArray = [gender, avail, classYr, location, verify];
+    }
+    if (filterName == 'avail') {
+      filterArray = [avail, gender, classYr, location, verify];
+    }
+    if (filterName == 'classYr') {
+      filterArray = [classYr, avail, gender, location, verify];
+    }
+    if (filterName == 'location') {
+      filterArray = [location, avail, gender, classYr, verify];
+    }
+    if (filterName == 'verify') {
+      filterArray = [verify, avail, gender, classYr, location];
+    }
 
     switch (sport) {
       case 'US-FOOTBALL':
@@ -33,11 +54,7 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
         this.applyAdvFilters(
           theItem,
           sport,
-          gender,
-          avail,
-          classYr,
-          location,
-          verify,
+          ...filterArray,
           positionUsFootball
         );
         // code block

@@ -20,10 +20,11 @@ import UnivLoadMore from './_modules/load-more/UnivLoadMore';
 import AthleteLoadMore from './_modules/load-more/AthleteLoadMore';
 
 import AdvanceFiltersParent from './_modules/athlete-adv-filters/AdvanceFiltersParent';
-// import AdvanceFilterParentHelper from './_modules/athlete-adv-filters/AdvanceFiltersParentHelper';
+import AdvanceFilterParentHelper from './_modules/athlete-adv-filters/AdvanceFiltersParentHelper';
 import FilterSwitchModal from './_modules/athlete-filter-switch-modal/FilterSwitchModal';
 import AdvGenderFiltersSelect from './_modules/athlete-adv-filters/AdvGenderFiltersSelect';
 import AdvAvailFiltersSelect from './_modules/athlete-adv-filters/AdvAvailFiltersSelect';
+import AdvFiltersSelect from './_modules/athlete-adv-filters/AdvFiltersSelect';
 
 class App {
   constructor() {
@@ -90,9 +91,10 @@ class App {
     ATHLETE ADVANCE FILTER
     */
     new AdvanceFiltersParent();
-    // new AdvanceFilterParentHelper();
-    new AdvGenderFiltersSelect();
-    new AdvAvailFiltersSelect();
+    new AdvanceFilterParentHelper();
+    new AdvFiltersSelect();
+    // new AdvGenderFiltersSelect();
+    // new AdvAvailFiltersSelect();
   }
 }
 
