@@ -220,7 +220,7 @@
 
               <li class="list-inline-item">
 
-                <select class="select-filter" id="position-golf">
+                <select class="select-filter" id="position-GOLF">
 
                   <option value="all">Handicap</option>
                   <option value="Plus7-0">+7-0</option>
@@ -233,7 +233,7 @@
 
               <li class="list-inline-item">
 
-                <select class="select-filter" id="wagr-golf">
+                <select class="select-filter" id="wagr-GOLF">
 
                   <option value="all">WAGR</option>
                   <option value="1-1000wagr">1-1000</option>
@@ -250,7 +250,7 @@
 
               <li class="list-inline-item">
 
-                <select class="select-filter" id="national-ranking-golf">
+                <select class="select-filter" id="national-ranking-GOLF">
 
                   <option value="all">National Ranking</option>
                   <option value="1-1000">1-1000</option>
@@ -270,7 +270,7 @@
 
               <li class="list-inline-item">
 
-                <select class="select-filter" id="swing-hand-golf">
+                <select class="select-filter" id="swing-hand-GOLF">
 
                   <option value="all">Swing Hand</option>
                   <option value="Left">Left</option>
@@ -287,13 +287,13 @@
               </a>
 
             </ul>
-            <!-- END menu-box-golf -->
+            <!-- END menu-box-GOLF -->
 
             <ul class="list-inline menu-box menu-box-sports menu-box-US-FOOTBALL">
 
               <li class="list-inline-item">
 
-                <select class="select-filter" id="position-us-football">
+                <select class="select-filter" id="position-US-FOOTBALL">
 
                   <option value="all">Positions</option>
                   <option value="Center">Center</option>
@@ -321,13 +321,13 @@
               </a>
 
             </ul>
-            <!-- END menu-box-us-football -->
+            <!-- END menu-box-US-FOOTBALL -->
 
             <ul class="list-inline menu-box menu-box-sports menu-box-BASEBALL">
 
               <li class="list-inline-item">
 
-                <select class="select-filter" id="position-primary-baseball">
+                <select class="select-filter" id="position-primary-BASEBALL">
 
                   <option value="all">Primary Positions</option>
                   <option value="Catcher-p">Catcher</option>
@@ -345,7 +345,7 @@
               </li>
               <li class="list-inline-item">
 
-                <select class="select-filter" id="position-secondary-baseball">
+                <select class="select-filter" id="position-secondary-BASEBALL">
 
                   <option value="all">Secondary Positions</option>
                   <option value="Catcher-s">Catcher</option>
@@ -375,7 +375,7 @@
 
               <li class="list-inline-item">
 
-                <select class="select-filter" id="position-primary-basketball">
+                <select class="select-filter" id="position-primary-BASKETBALL">
 
                   <option value="all">Primary Positions</option>
                   <option value="Center-p">Center</option>
@@ -389,7 +389,7 @@
               </li>
               <li class="list-inline-item">
 
-                <select class="select-filter" id="position-secondary-basketball">
+                <select class="select-filter" id="position-secondary-BASKETBALL">
 
                   <option value="all">Secondary Positions</option>
                   <option value="Center-s">Center</option>
@@ -403,7 +403,7 @@
               </li>
               <li class="list-inline-item">
 
-                <select class="select-filter" id="preferred-hand-basketball">
+                <select class="select-filter" id="hand-BASKETBALL">
 
                   <option value="all">Preferred Hand</option>
                   <option value="Left">Left</option>
@@ -420,13 +420,13 @@
               </a>
 
             </ul>
-            <!-- END menu-box-basketball -->
+            <!-- END menu-box-BASKETBALL -->
 
             <ul class="list-inline menu-box menu-box-sports menu-box-CHEERLEADING">
 
               <li class="list-inline-item">
 
-                <select class="select-filter" id="position-cheerleading">
+                <select class="select-filter" id="position-CHEERLEADING">
 
                   <option value="all">Positions</option>
                   <option value="Main-base">Main base</option>
@@ -446,7 +446,7 @@
               </a>
 
             </ul>
-            <!-- END menu-box-cheerleading -->
+            <!-- END menu-box-CHEERLEADING -->
 
             <ul class="list-inline menu-box menu-box-sports menu-box-FIELD-HOCKEY">
 

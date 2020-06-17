@@ -103,16 +103,7 @@ class AdvanceFiltersParent {
     console.log(I);
 
     // console.log(...arguments); //SHOWS NOTHING
-    // if (A == 'all') {
-    //   theItem.addClass('d-none');
-    //   this.resetFilters();
-    //   console.log('Reset Base Filters --- all')
 
-    //   setTimeout(function () {
-    //     $(`.${sport}`).removeClass('d-none');
-    //   });
-    // } else 
-    
     if ( // SET OF 9 STARTS HERE ABCDEFGHI
       A != 'all' &&
       B != 'all' &&
@@ -4347,6 +4338,14 @@ class AdvanceFiltersParent {
       theItem.addClass('d-none');
       setTimeout(function () {
         $(`.${sport}.${I}`).removeClass('d-none');
+      });
+    } else if (A == 'all' || B == 'all' || C == 'all' || D == 'all' || E == 'all' || F == 'all' || G == 'all' || H == 'all' || I == 'all' ) {
+      theItem.addClass('d-none');
+      this.resetFilters();
+      console.log('ABCDEFGHI --- all')
+
+      setTimeout(function () {
+        $(`.${sport}`).removeClass('d-none');
       });
     } else {
       console.log('THIS IS FROM ELSE...');

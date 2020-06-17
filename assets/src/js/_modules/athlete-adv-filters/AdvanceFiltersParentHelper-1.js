@@ -13,6 +13,7 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
 
   getSports = (filterName) => {
     console.log(`Filter Name: ${filterName}`);
+    let filterArray;
 
     // BASE FILTERS
     const sport = $('.menu-title.sport-title').text();
@@ -23,35 +24,50 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
     const gender = $('#gender-select-adv').val();
     const theItem = $('.item-entry-asm');
 
-    // BASE FILTER ARRAY
-    const filterArray = [
-      theItem,
-      sport,
-      gender,
-      avail,
-      classYr,
-      location,
-      verify,
-    ];
+    // FILTERS ORGANIZED FOR SELECT CLICK IMPACT FOR EXAMPLE:
+    // gender NEEDS TO BE AT THE BEGINNING WHEN gender SELECT FILTER IS CLICKED
+    if (filterName == 'gender') {
+      filterArray = [gender, avail, classYr, location, verify];
+    } else if (filterName == 'avail') {
+      filterArray = [avail, gender, classYr, location, verify];
+    } else if (filterName == 'classYr') {
+      filterArray = [classYr, avail, gender, location, verify];
+    } else if (filterName == 'location') {
+      filterArray = [location, avail, gender, classYr, verify];
+    } else if (filterName == 'verify') {
+      filterArray = [verify, avail, gender, classYr, location];
+    } else {
+      filterArray = [gender, avail, classYr, location, verify];
+    }
 
     switch (sport) {
       case 'US-FOOTBALL':
         console.log(`Sport Filters for ${sport}`);
+        // console.log(`Sport Filters for ${positionUsFootball}`);
+        // PARENT FUNCTION BUT IT'S AN ARROW FUNC SO MUST BE CALLED WITH this.ParentFunc
+        // NORMAL FUNCTION NEEDS BE CALLED WITH super.ParentFunc
         // US FOOTBALL FILTER
         const positionUsFootball = $('#position-US-FOOTBALL').val();
 
-        this.applyAdvFilters(...filterArray, positionUsFootball);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          ...filterArray,
+          positionUsFootball
+        );
         // code block
         break;
       case 'BASEBALL':
         console.log(`Sport Filters for ${sport}`);
         // BASEBALL FILTERS
-        const positionPrimaryBaseball = $('#position-primary-BASEBALL').val();
+        const positionPrimaryBaseball = $('#position-primary-baseball').val();
         const positionSecondaryBaseball = $(
-          '#position-secondary-BASEBALL'
+          '#position-secondary-baseball'
         ).val();
 
         this.applyAdvFilters(
+          theItem,
+          sport,
           ...filterArray,
           positionPrimaryBaseball,
           positionSecondaryBaseball
@@ -62,38 +78,45 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
         console.log(`Sport Filters for ${sport}`);
         // BASKETBALL FILTERS
         const positionPrimaryBasketball = $(
-          '#position-primary-BASKETBALL'
+          '#position-primary-basketball'
         ).val();
         const positionSecondaryBasketball = $(
-          '#position-secondary-BASKETBALL'
+          '#position-secondary-basketball'
         ).val();
-        const handBasketball = $('#hand-BASKETBALL').val();
 
         this.applyAdvFilters(
+          theItem,
+          sport,
           ...filterArray,
           positionPrimaryBasketball,
-          positionSecondaryBasketball,
-          handBasketball
+          positionSecondaryBasketball
         );
         // code block
         break;
       case 'CHEERLEADING':
         console.log(`Sport Filters for ${sport}`);
         // CHEERLEADING FILTER
-        const positionCheerleading = $('#position-CHEERLEADING').val();
+        const positionCheerleading = $('#position-cheerleading').val();
 
-        this.applyAdvFilters(...filterArray, positionCheerleading);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          ...filterArray,
+          positionCheerleading
+        );
         // code block
         break;
       case 'GOLF':
         console.log(`Sport Filters for ${sport}`);
         // GOLF FILTERS
-        const positionGolf = $('#position-GOLF').val();
-        const wagrGolf = $('#wagr-GOLF').val();
-        const nationalRankingGolf = $('#national-ranking-GOLF').val();
-        const swingHandGolf = $('#swing-hand-GOLF').val();
+        const positionGolf = $('#position-golf').val();
+        const wagrGolf = $('#wagr-golf').val();
+        const nationalRankingGolf = $('#national-ranking-golf').val();
+        const swingHandGolf = $('#swing-hand-golf').val();
 
         this.applyAdvFilters(
+          theItem,
+          sport,
           ...filterArray,
           positionGolf,
           wagrGolf,
@@ -107,7 +130,12 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
         // FIELD-HOCKEY
         const positionFieldHockey = $('#position-FIELD-HOCKEY').val();
 
-        this.applyAdvFilters(...filterArray, positionFieldHockey);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          ...filterArray,
+          positionFieldHockey
+        );
         // code block
         break;
       case 'GYMNASTICS':
@@ -115,7 +143,12 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
         // GYMNASTICS
         const disciplineGymnastics = $('#discipline-GYMNASTICS').val();
 
-        this.applyAdvFilters(...filterArray, disciplineGymnastics);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          ...filterArray,
+          disciplineGymnastics
+        );
         // code block
         break;
       case 'ICE-HOCKEY':
@@ -123,7 +156,7 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
         // ICE-HOCKEY
         const positionIceHockey = $('#position-ICE-HOCKEY').val();
 
-        this.applyAdvFilters(...filterArray, positionIceHockey);
+        this.applyAdvFilters(theItem, sport, ...filterArray, positionIceHockey);
         // code block
         break;
       case 'LACROSSE':
@@ -131,7 +164,7 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
         // LACROSSE
         const positionLacrosse = $('#position-LACROSSE').val();
 
-        this.applyAdvFilters(...filterArray, positionLacrosse);
+        this.applyAdvFilters(theItem, sport, ...filterArray, positionLacrosse);
         // code block
         break;
       case 'ROWING':
@@ -139,7 +172,7 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
         // ROWING
         const positionRowing = $('#position-ROWING').val();
 
-        this.applyAdvFilters(...filterArray, positionRowing);
+        this.applyAdvFilters(theItem, sport, ...filterArray, positionRowing);
         // code block
         break;
       case 'RUGBY':
@@ -147,7 +180,7 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
         // RUGBY
         const positionRugby = $('#position-RUGBY').val();
 
-        this.applyAdvFilters(...filterArray, positionRugby);
+        this.applyAdvFilters(theItem, sport, ...filterArray, positionRugby);
         // code block
         break;
       case 'SOCCER':
@@ -155,7 +188,7 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
         // SOCCER
         const positionSoccer = $('#position-SOCCER').val();
 
-        this.applyAdvFilters(...filterArray, positionSoccer);
+        this.applyAdvFilters(theItem, sport, ...filterArray, positionSoccer);
         // code block
         break;
       case 'SOFTBALL':
@@ -167,6 +200,8 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
         ).val();
 
         this.applyAdvFilters(
+          theItem,
+          sport,
           ...filterArray,
           positionPrimarySoftball,
           positionSecondarySoftball
@@ -182,6 +217,8 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
         ).val();
 
         this.applyAdvFilters(
+          theItem,
+          sport,
           ...filterArray,
           mainEventSwimming,
           secondaryEventSwimming
@@ -197,6 +234,8 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
         const nationalRankingTennis = $('#ranking-TENNIS').val();
 
         this.applyAdvFilters(
+          theItem,
+          sport,
           ...filterArray,
           utrTennis,
           itfTennis,
@@ -210,7 +249,12 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
         // TRACK & FIELD
         const positionTrackAndField = $('#position-TRACK-AND-FIELD').val();
 
-        this.applyAdvFilters(...filterArray, positionTrackAndField);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          ...filterArray,
+          positionTrackAndField
+        );
         // code block
         break;
       case 'VOLLEYBALL':
@@ -218,7 +262,12 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
         // VOLLEYBALL
         const positionVolleyball = $('#position-VOLLEYBALL').val();
 
-        this.applyAdvFilters(...filterArray, positionVolleyball);
+        this.applyAdvFilters(
+          theItem,
+          sport,
+          ...filterArray,
+          positionVolleyball
+        );
         // code block
         break;
       case 'WATER-POLO':
@@ -226,7 +275,7 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
         // WATER POLO
         const positionWaterPolo = $('#position-WATER-POLO').val();
 
-        this.applyAdvFilters(...filterArray, positionWaterPolo);
+        this.applyAdvFilters(theItem, sport, ...filterArray, positionWaterPolo);
         // code block
         break;
       default:
