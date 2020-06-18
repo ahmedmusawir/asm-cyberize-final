@@ -175,7 +175,7 @@ class AdvanceFilterParentHelper extends AdvanceFiltersParent {
         break;
       case 'SWIMMING-AND-DIVING':
         console.log(`Sport Filters for ${sport}`);
-        // SWIMMING
+        // SWIMMING AND DIVING
         const mainEventSwimming = $('#main-event-SWIMMING-AND-DIVING').val();
         const secondaryEventSwimming = $(
           '#secondary-event-SWIMMING-AND-DIVING'

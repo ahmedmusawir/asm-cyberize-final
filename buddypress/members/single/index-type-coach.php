@@ -61,7 +61,7 @@ get_header();
 
         <?php if (is_user_logged_in() && ($user_id == $current_user_id)) : ?>
         <!-- SETTING UP EMAIL INBOX -->
-        <?php echo do_shortcode('[front-end-pm]'); ?>
+        <?php //echo do_shortcode('[front-end-pm]'); ?>
         <!-- SETTING UP EMAIL INBOX END -->
         <?php endif; ?>
 
@@ -132,9 +132,49 @@ get_header();
       </article>
       <!-- CENTER COLUMN END -->
 
+      <!-- RIGHT COLUMN - SIDEBAR COLUMN STARTS -->
+
       <article class="col-sm-12 col-md-12 col-lg-12 col-xl-3">
-        <!-- <img src="/wp-content/uploads/2020/01/profile-sidebar.png" alt=""> -->
-        <?php get_sidebar(); ?>
+
+        <!-- ATHLETE PROFILE RIGHT EMAIL BUTTON SET START -->
+
+        <!-- MESSAGE BUTTON -->
+        <?php // if (is_user_logged_in() && ($user_id == $current_user_id)) : ?>
+
+        <section id="athlete-right-email-button">
+          <a href="/athlete-email-inbox/" class="clearfix">
+            <div class="message-button">
+              <img src="/wp-content/uploads/email-btn-icon.png" alt="" class="float-left btn-image">
+              <div class="btn-text-holder">
+                <h5 class="btn-text">MESSAGE ATHLETE</h5>
+              </div>
+            </div>
+          </a>
+
+        </section>
+        <?php // endif; ?>
+
+
+        <!-- SEARCH ATHLETE BUTTON -->
+
+        <section id="athlete-right-search-athlete-button">
+          <a href="/members/type/athletes/" class="clearfix">
+            <div class="message-button">
+              <img src="/wp-content/uploads/search-athlete-icon.png" alt="" class="float-left btn-image">
+              <div class="btn-text-holder">
+                <h5 class="btn-text">SEARCH ATHLETE</h5>
+              </div>
+            </div>
+          </a>
+
+        </section>
+
+        <!-- ATHLETE PROFILE RIGHT EMAIL BUTTON SET END -->
+
+        <!-- THE SIDEBAR -->
+        <div class="sidebar-area mt-5">
+          <?php get_sidebar(); ?>
+        </div>
 
       </article>
 
