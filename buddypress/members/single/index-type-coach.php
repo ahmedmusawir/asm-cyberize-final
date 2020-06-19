@@ -142,7 +142,7 @@ get_header();
         <?php // if (is_user_logged_in() && ($user_id == $current_user_id)) : ?>
 
         <section id="athlete-right-email-button">
-          <a href="/athlete-email-inbox/" class="clearfix">
+          <a href="/coach-email-inbox/" class="clearfix">
             <div class="message-button">
               <img src="/wp-content/uploads/email-btn-icon.png" alt="" class="float-left btn-image">
               <div class="btn-text-holder">
