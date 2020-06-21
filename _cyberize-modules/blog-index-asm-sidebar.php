@@ -14,12 +14,10 @@
       <!-- Page Header with image -->
       <section id="general-blog-page-header">
         <section class="top-page-menu clearfix">
-          <h3 class="menu-title float-left">Filters:</h3>
-          <ul class="list-inline menu-box float-left">
-            <a href="/blog">
-              <li class="list-inline-item">All</li>
-            </a>
-          </ul>
+          <h3 class="bluebar-title float-left">Get Recruited</h3>
+        </section>
+        <section class="top-page-menu-mobile">
+
           <?php
           wp_nav_menu( array( 
               'theme_location' => 'post-cat', 
@@ -28,6 +26,21 @@
 
         </section>
       </section>
+
+      <!-- TOP FILTER BAR STARTS -->
+      <div class="top-filter-navbar-index">
+
+        <section class="top-page-menu clearfix">
+          <h3 class="menu-title float-left">Filters</h3>
+
+          <?php
+          wp_nav_menu( array( 
+              'theme_location' => 'post-cat', 
+              'container_class' => 'menu-box' ) ); 
+          ?>
+        </section>
+      </div>
+      <!-- TOP FILTER BAR ENDS -->
 
       <section class="container-fluid">
 
