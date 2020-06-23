@@ -3,16 +3,140 @@ import $ from 'jquery';
 class AdvanceFiltersParent {
   constructor() {
     this.init();
+
+    // COLLECTING RESET BUTTON
+    this.buttonReset = $('#ath-adv-filter-reset');
+    this.buttonBack = $('.back-to-filters');
+
+    this.showNoDataFound();
+    this.setEvents();
   }
 
   init = () => {
     // console.log('ASM Parent AdvanceFilter');
   };
 
+  showNoDataFound() {
+    const noDataItem = $('.no-data-found');
+    setTimeout(function () {
+      noDataItem.removeClass('d-none');
+    }, 4000);
+  }
+
+  setEvents() {
+    if (this.buttonReset) {
+      this.buttonReset.on('click', this.resetFilters.bind(this));
+    }
+    if (this.buttonBack) {
+      this.buttonBack.on('click', this.removeAdvFilters.bind(this));
+    }
+  }
+
+  removeAdvFilters() {
+    console.log('Remove Adv Filters');
+    // e.stopImmediatePropagation();
+
+    // GOING BACK TO BASE FILTERS MENU
+    const athAdvfilter = $('#top-advanced-filter');
+    athAdvfilter.addClass('d-none');
+    // RESETTING TO ALL SPORTS
+    this.resetBaseFilters();
+  }
+
+  resetFilters() {
+    // console.log('reset - coming from Adv Filter Parent ... ');
+    // BASE FILTERS RESET
+    const theItem = $('.item-entry-asm');
+
+    const sport = $('.menu-title.sport-title').text();
+
+    const gender = $('#gender-select-adv');
+    gender.val('all');
+
+    const avail = $('#avail-select-adv');
+    avail.val('all');
+
+    const classYr = $('#class-year-select-adv');
+    classYr.val('all');
+
+    const location = $('#location-select-adv');
+    location.val('all');
+
+    const verify = $('#verify-select-adv');
+    verify.val('all');
+
+    // US FOOTBALL FILTER
+    const positionUsFootball = $('#position-US-FOOTBALL');
+
+    // BASEBALL FILTERS
+    const positionPrimaryBaseball = $('#position-primary-BASEBALL');
+    const positionSecondaryBaseball = $(
+      '#position-secondary-BASEBALL'
+    );
+
+    // BASKETBALL FILTERS
+    const positionPrimaryBasketball = $(
+      '#position-primary-BASKETBALL'
+    );
+    const positionSecondaryBasketball = $(
+      '#position-secondary-BASKETBALL'
+    );
+    const handBasketball = $('#hand-BASKETBALL');
+
+    // CHEERLEADING FILTER
+    const positionCheerleading = $('#position-CHEERLEADING').val();
+
+    // GOLF FILTERS
+    const positionGolf = $('#position-GOLF');
+    positionGolf.val('all');
+
+    const wagrGolf = $('#wagr-GOLF');
+    wagrGolf.val('all');
+
+    const nationalRankingGolf = $('#national-ranking-GOLF');
+    nationalRankingGolf.val('all');
+
+    const swingHandGolf = $('#swing-hand-GOLF');
+    swingHandGolf.val('all');
+
+    // FIELD-HOCKEY
+    const positionFieldHockey = $('#position-FIELD-HOCKEY');
+
+    // GYMNASTICS
+    const disciplineGymnastics = $('#discipline-GYMNASTICS');
+
+    // ICE-HOCKEY
+    const positionIceHockey = $('#position-ICE-HOCKEY');
+
+    // LACROSSE
+    const positionLacrosse = $('#position-LACROSSE');
+ 
+// FIELD-HOCKEY
+const positionFieldHockey = $('#position-FIELD-HOCKEY').val();
+
+
+    theItem.addClass('d-none');
+    setTimeout(function () {
+      $(`.${sport}`).removeClass('d-none');
+    });
+  }
+
+  resetBaseFilters() {
+    // console.log('reset - coming from Adv Filter Parent ... ');
+    const theItem = $('.item-entry-asm');
+
+    theItem.addClass('d-none');
+    setTimeout(function () {
+      theItem.removeClass('d-none');
+    });
+  }
+
   /**
+  A = ALWAYS CURRENT CLICKED SELECT FILTER, MEANS, IF GENDER IS CLICKED IT WILL BE GENDER
   sport = ALWAYS STATIC IN THIS CASE. COMMON IN EVERY FILTER CUZ SPORTS IS THE BASE FILTER
   theItem = THE ATHLETE MEMBER BLOCK THAT COMES AND GOES WITH .d-none CLASS
   */
+
   applyAdvFilters = (theItem, sport, A, B, C, D, E, F, G, H, I) => {
     // applyAdvFilters = (...arguments) => { //DOESN'T WORK
     // console.log('Adv filter theItem: ' + theItem);

@@ -4,9 +4,9 @@ THE ADVANCE FILTERS
 */
 import $ from 'jquery';
 import Bootstrap from 'bootstrap';
-import AdvanceFiltersParentHelper from '../athlete-adv-filters/AdvanceFiltersParentHelper';
+import AdvanceFiltersParent from '../athlete-adv-filters/AdvanceFiltersParent';
 
-class FilterSwitchModal extends AdvanceFiltersParentHelper {
+class FilterSwitchModal extends AdvanceFiltersParent {
   constructor() {
     super();
     // COLLECTING BUTTON

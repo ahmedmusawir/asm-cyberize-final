@@ -11,7 +11,7 @@
   <div class="screen-content">
 
     <!-- TOP BLUE BAR START -->
-    <div class="search-menu-container">
+    <div class="top-blue-bar">
       <article class="">
         <h5 class="text-light pt-3 pl-4">Athletes: </h5>
         <?php //bp_get_template_part( 'common/search-and-filters-bar' ); ?>
@@ -747,8 +747,8 @@
                 <select class="select-filter" id="utr-TENNIS">
 
                   <option value="all">UTR</option>
-                  <option value="1-10">1-10</option>
-                  <option value="10-20">10-20</option>
+                  <option value="1-10-utr">1-10 utr</option>
+                  <option value="10-20-urt">10-20 utr</option>
 
                 </select>
 
@@ -758,8 +758,8 @@
                 <select class="select-filter" id="itf-TENNIS">
 
                   <option value="all">ITF</option>
-                  <option value="1-10">1-10</option>
-                  <option value="10-20">10-20</option>
+                  <option value="1-10-itf">1-10 itf</option>
+                  <option value="10-20-itf">10-20 itf</option>
 
                 </select>
 
@@ -900,7 +900,7 @@
 
     <div class="row asm-index-page-content">
 
-      <div class="col-md-9">
+      <div class="col-md-12 col-lg-9">
 
         <!-- NO DATA FOUND START -->
 
@@ -930,7 +930,7 @@
 
       </div> <!-- end col-md-8 -->
 
-      <div class="col-3">
+      <div class="col-md-12 col-lg-3">
 
         <div class="sidebar-container pr-3">
           <?php get_sidebar(); ?>

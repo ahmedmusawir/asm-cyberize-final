@@ -312,12 +312,12 @@ bp_nouveau_before_loop(); ?>
         ); 
       ?> data-bp-item-id="<?php bp_member_user_id(); ?>" data-bp-item-component="members">
       <div class="list-wrap-asm row">
-        <article class="col-12 col-sm-12 col-md-3 col-lg-3">
-          <div class="item-avatar-asm mx-auto">
+        <article class="col-md-3">
+          <div class="item-avatar-asm">
             <a href="<?php bp_member_permalink(); ?>"><?php bp_member_avatar( bp_nouveau_avatar_args() ); ?></a>
           </div>
         </article>
-        <article class="col-12 col-sm-12 col-md-9 col-lg-9">
+        <article class="col-md-9">
           <div class="item-asm">
 
             <ul class="list-inline status-bar float-right">
@@ -349,6 +349,153 @@ bp_nouveau_before_loop(); ?>
                 <li class="list-inline-item"><i class="fas fa-users-class"></i>&nbsp;Class:
                   <?php echo $enrollment_year; ?> </li>
               </ul>
+
+              <!-- UNIT TEST DATA START -->
+
+              <?php 
+              
+              if ($sport == 'US-FOOTBALL') : 
+
+                echo $us_football_position; 
+          
+              endif; 
+          
+              if ($sport == 'BASEBALL') : 
+          
+                echo $baseball_primary_position . '</br>';
+                echo $baseball_secondary_position;
+                
+              endif; 
+          
+              if ($sport == 'SOFTBALL') : 
+          
+                echo $softball_primary_position . '</br>';
+                echo $softball_secondary_position;
+          
+              endif; 
+          
+              if ($sport == 'BASKETBALL') : 
+          
+                echo $basketball_preferred_hand . ' :HAND <br>';
+                echo $basketball_primary_position . ' :PRIMARY <br>';
+                echo $basketball_secondary_position . ' :SECONDARY <br>';
+          
+              endif; 
+          
+              if ($sport == 'CHEERLEADING') : 
+          
+                echo $cheerleading_position;
+          
+              endif; 
+          
+              if ($sport == 'GOLF') : 
+              ?>
+              <ul>
+                <li class="d-inline-block pr-2">
+                  Handicap: <?php echo $golf_handicap; ?>
+                </li> |
+                <li class="d-inline-block pr-2">
+                  WAGR: <?php echo $golf_wagr; ?>
+                </li> |
+                <li class="d-inline-block pr-2">
+                  National Ranking: <?php echo $golf_national_ranking; ?>
+                </li> |
+                <li class="d-inline-block pr-2">
+                  Hand: <?php echo $golf_preferred_hand; ?>
+                </li>
+              </ul>
+
+              <?php  
+
+          
+              endif; 
+          
+              if ($sport == 'FIELD-HOCKEY') : 
+          
+                echo $field_hockey_position;
+          
+              endif; 
+          
+              if ($sport == 'GYMNASTICS') : 
+          
+                echo $gymnastics_disciplines;
+          
+              endif; 
+          
+          
+              if ($sport == 'ICE-HOCKEY') : 
+          
+                  echo $ice_hockey_position;
+          
+              endif; 
+              
+          
+              if ($sport == 'LACROSSE') : 
+          
+                echo $lacrosse_position;
+          
+              endif;     
+          
+              if ($sport == 'ROWING') : 
+          
+                echo $rowing_position;
+          
+              endif;  
+          
+              if ($sport == 'RUGBY') : 
+          
+                echo $rugby_position;
+          
+              endif;  
+          
+          
+              if ($sport == 'SOCCER') : 
+          
+                echo $soccer_position;
+          
+              endif;  
+          
+          
+              if ($sport == 'SWIMMING-AND-DIVING') : 
+          
+                echo $swimming_main_event_style . ' :main event <br>';
+                echo $swimming_secondary_event_style;
+          
+              endif;  
+          
+          
+              if ($sport == 'TENNIS') : 
+          
+                echo $tennis_utr . ' :UTR <br>';
+                echo $tennis_itf . ' :ITF <br>';
+                echo $tennis_preferred_hand . ' :HAND <br>';
+                echo $tennis_national_ranking . ' :NATIONAL <br>';
+          
+              endif;  
+          
+          
+              if ($sport == 'TRACK-AND-FIELD') : 
+          
+                echo $track_field_discipline;
+          
+              endif;  
+          
+          
+              if ($sport == 'VOLLEYBALL') : 
+          
+                echo $volleyball_position;
+          
+              endif;  
+          
+          
+              if ($sport == 'WATER-POLO') : 
+          
+                echo $water_polo_position;
+          
+              endif;  
+              
+              ?>
+              <!-- UNIT TEST DATA END -->
 
               <div class="text-content">
                 <?php echo $excerpt; ?>
