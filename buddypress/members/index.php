@@ -138,7 +138,7 @@
             <h3 class="menu-title float-left pt-2 text-light">Other Filters</h3>
 
           </div>
-          <div class="col-md-8">
+          <div class="col-md-10">
             <ul class="list-inline menu-box">
 
               <li class="list-inline-item">
@@ -215,7 +215,7 @@
             <h3 class="menu-title sport-title float-left pt-2">Sports Name</h3>
 
           </div>
-          <div class="col-md-8">
+          <div class="col-md-10">
             <ul class="list-inline menu-box menu-box-sports menu-box-GOLF">
 
               <li class="list-inline-item">
