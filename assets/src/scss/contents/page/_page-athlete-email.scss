@@ -329,7 +329,12 @@
       // CENTER COLUMN END
 
       // RIGHT COLUMN START
-
+      .sidebar-col {
+        background-color: white;
+        @media (max-width: 1199px) {
+          margin-top: 1rem;
+        }
+      }
       // RIGHT COLUMN END
     }
   }
@@ -338,16 +343,8 @@
   #athlete-right-email-button {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf0404+0,ff3019+100 */
     background: #cf0404; /* Old browsers */
-    background: -moz-linear-gradient(
-      left,
-      #cf0404 0%,
-      #ff3019 100%
-    ); /* FF3.6-15 */
-    background: -webkit-linear-gradient(
-      left,
-      #cf0404 0%,
-      #ff3019 100%
-    ); /* Chrome10-25,Safari5.1-6 */
+    background: -moz-linear-gradient(left, #cf0404 0%, #ff3019 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #cf0404 0%, #ff3019 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(
       to right,
       #cf0404 0%,
@@ -377,16 +374,8 @@
     margin-bottom: 1rem;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf0404+0,ff3019+100 */
     background: $cg-primary; /* Old browsers */
-    background: -moz-linear-gradient(
-      left,
-      #035083 0%,
-      #0574b8 100%
-    ); /* FF3.6-15 */
-    background: -webkit-linear-gradient(
-      left,
-      #035083 0%,
-      #0574b8 100%
-    ); /* Chrome10-25,Safari5.1-6 */
+    background: -moz-linear-gradient(left, #035083 0%, #0574b8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #035083 0%, #0574b8 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(
       to right,
       #035083 0%,

@@ -47,19 +47,19 @@ get_header();
       <article class="col-sm-12 col-md-12 col-lg-8 col-xl-6">
 
         <?php if (is_user_logged_in() ) : ?>
+
         <!-- SETTING UP EMAIL INBOX -->
         <?php echo do_shortcode('[front-end-pm]'); ?>
         <!-- SETTING UP EMAIL INBOX END -->
+
         <?php endif; ?>
-
-
 
       </article>
       <!-- CENTER COLUMN END -->
 
       <!-- RIGHT COLUMN - SIDEBAR COLUMN STARTS -->
 
-      <article class="col-sm-12 col-md-12 col-lg-12 col-xl-3">
+      <article class="sidebar-col col-sm-12 col-md-12 col-lg-12 col-xl-3">
 
         <!-- ATHLETE PROFILE RIGHT EMAIL BUTTON SET START -->
 
