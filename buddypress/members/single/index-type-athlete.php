@@ -185,7 +185,7 @@ get_header();
         <!-- ATHLETE PROFILE RIGHT EMAIL BUTTON SET START -->
 
         <!-- MESSAGE BUTTON -->
-        <?php // if (is_user_logged_in() && ($user_id == $current_user_id)) : ?>
+        <?php if (is_user_logged_in() && ($user_id == $current_user_id)) : ?>
 
         <section id="athlete-right-email-button">
           <a href="/athlete-email-inbox/" class="clearfix">
@@ -198,7 +198,7 @@ get_header();
           </a>
 
         </section>
-        <?php // endif; ?>
+        <?php endif; ?>
 
 
         <!-- SEARCH ATHLETE BUTTON -->

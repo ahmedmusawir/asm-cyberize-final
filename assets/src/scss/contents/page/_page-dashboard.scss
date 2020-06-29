@@ -7,6 +7,7 @@
 // ATHLETE DASHBOARD
 #page-asm-dashboard {
   #general-page-header {
+    // border: 1rem solid red;
     position: fixed;
     top: 80px;
     z-index: 100;
@@ -69,7 +70,7 @@
 
   // TOP TASK BOX
   #dashboard-task-board {
-    // border: 3px dotted blue;
+    // border: 1rem dotted blue;
     background-color: #0277bb;
     margin-top: 113px;
     padding: 3rem;
@@ -113,6 +114,9 @@
 
       .task-box {
         background-color: white;
+        margin-bottom: 1.5rem;
+        margin-right: 0.5rem;
+        // border: 1rem dotted dodgerblue;
 
         i {
           font-size: 2.5rem;
@@ -136,6 +140,7 @@
         .btn {
           padding: 1rem 2rem;
           margin-top: 2rem;
+          margin-bottom: 1rem;
           width: 200px;
           border-radius: 0;
           background-color: lighten($color: #0277bb, $amount: 10%);
@@ -158,7 +163,7 @@
     margin-top: 30px;
   }
 
-  //MAIN CONTENT
+  //MAIN CONTENT - TASK VIDEO ITEMS
   #main {
     // border: 3px dotted red;
     padding: 4rem;
@@ -233,7 +238,7 @@
   // TOP TASK BOX
   #dashboard-task-board {
     // border: 3px dotted blue;
-    background: url("/wp-content/uploads/bg-image.jpg");
+    background: url('/wp-content/uploads/bg-image.jpg');
     // background-color: #0277bb;
     margin-top: 113px;
     padding: 3rem;
@@ -278,6 +283,12 @@
 
       .task-box {
         background-color: white;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+
+        @media (max-width: 625px) {
+          margin-right: 0;
+        }
 
         i {
           font-size: 2.5rem;
@@ -285,9 +296,7 @@
           padding-top: 1rem;
           color: lighten($color: $cg-primary, $amount: 15%);
         }
-        i.fa-envelope-square {
-          // border: 4px dotted red;
-        }
+
         .text-only {
           font-weight: 700;
           padding-top: 0.5rem;

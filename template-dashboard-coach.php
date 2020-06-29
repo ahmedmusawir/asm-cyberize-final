@@ -51,9 +51,9 @@ get_header(); ?>
       // $total_profile_visit = visitors_get_profile_visit_count($user_id);
     ?>
 
-    <div id="bottom-task-block" class="d-flex justify-content-center">
+    <div id="bottom-task-block" class="d-flex flex-wrap justify-content-center">
 
-      <div class="task-box task-box-sm text-center mr-5">
+      <div class="task-box task-box-sm text-center">
         <h6 class="text-only">SEARCH ATHLETES</h6>
         <h1 class="text-number">
           <i class="fab fa-searchengin"></i>
@@ -61,7 +61,7 @@ get_header(); ?>
         <a href="/members/type/athletes/" class="btn btn-info">Search</a>
       </div>
 
-      <div class="task-box task-box-sm text-center mr-5">
+      <div class="task-box task-box-sm text-center">
         <h6 class="text-only">EDTI YOUR PROFILE</h6>
         <h1 class="text-number">
           <i class="fas fa-user-edit"></i>

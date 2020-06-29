@@ -67,13 +67,13 @@ $user_id = bp_displayed_user_id();
       </li>
     </ul>
     <div class="athlete-sports-info">
-      <h1 class="float-left">
+      <h1 class="sport-name">
         <?php echo $sport; ?><br>
-        <small class="float-left">SPORT</small>
+        <small class="">SPORT</small>
       </h1>
-      <h1 class="float-right">
+      <h1 class="enrollment-year">
         <?php echo $enrollment_year; ?><br>
-        <small class="float-right">ENROLLMENT YEAR</small>
+        <small class="">ENROLLMENT YEAR</small>
       </h1>
     </div>
   </section>

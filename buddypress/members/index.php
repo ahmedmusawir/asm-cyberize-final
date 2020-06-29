@@ -4,9 +4,17 @@
  *
  * @version 3.0.0
  */
+// $url = get_home_url();
+// echo $url;
 
 ?>
 <section id="athlete-index" class="mt-5 pt-5">
+  <?php 
+  // if ( !is_super_admin() ) {
+  //   wp_safe_redirect( $url, 302 );
+  //   exit;
+  //  } 
+  ?>
 
   <div class="screen-content">
 

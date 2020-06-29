@@ -48,7 +48,6 @@
 
     #item-body {
       margin-top: 90px;
-      // border: 4px dotted red;
       position: relative;
 
       //  LEFT COLUMN START
@@ -77,6 +76,10 @@
           margin: 0;
           margin-top: 0.5rem;
         }
+        @media (max-width: 991px) {
+          // border: 4px dotted red;
+          margin-top: -200px;
+        }
       }
 
       .athlete-meta {
@@ -101,13 +104,21 @@
           border-top: 1px solid white;
           border-right: 1px solid white;
           border-left: 1px solid white;
+          // LABELS
+          .label {
+            // border: 4px dotted red;
+            @media (min-width: 992px) and (max-width: 1750px) {
+              font-size: 0.8rem;
+              font-weight: 800;
+            }
+          }
         }
       }
 
       // COACH PROFILE
       .coach-bio {
+        // border: 4px dotted red;
         .list-group-item {
-          // border: 4px dotted red;
           background-color: lighten($color: #e7e7e7, $amount: 8%);
           border-bottom: 4px solid white;
           border-top: 1px solid white;
@@ -116,6 +127,13 @@
 
           .values {
             font-weight: 700;
+          }
+          .label {
+            // border: 4px dotted red;
+            @media (min-width: 992px) and (max-width: 1750px) {
+              font-size: 0.8rem;
+              font-weight: 800;
+            }
           }
         }
 
@@ -130,14 +148,53 @@
 
       .athlete-sports-info {
         // border: 4px dotted blue;
+        @media (max-width: 991px) {
+          padding-top: 1rem;
+          margin-bottom: 2rem;
+          // border: 4px dotted blue;
+          @include clearfix;
+        }
+        @media (max-width: 500px) {
+          margin-bottom: 4rem;
+        }
+
         h1 {
           color: #024d80;
-          font-size: 1.5rem;
+          font-size: 1.3rem;
+          font-weight: 800;
           text-align: center;
+          @media (min-width: 992px) and (max-width: 1750px) {
+            font-size: 1.5rem;
+            font-weight: 800;
+          }
         }
         small {
-          font-size: 1rem;
-          font-weight: 500;
+          font-size: 0.8rem;
+          font-weight: 600;
+          @media (min-width: 992px) and (max-width: 1750px) {
+            font-size: 1rem;
+            font-weight: 800;
+          }
+        }
+        .sport-name {
+          float: left;
+          @media (min-width: 992px) and (max-width: 1750px) {
+            float: none;
+          }
+          @media (max-width: 500px) {
+            float: none;
+          }
+        }
+        .enrollment-year {
+          float: right;
+          @media (min-width: 992px) and (max-width: 1750px) {
+            float: none;
+          }
+          @media (max-width: 500px) {
+            float: none;
+            margin-bottom: 2rem;
+            // border: 3px dotted greenyellow;
+          }
         }
       }
 
@@ -332,7 +389,10 @@
       .sidebar-col {
         background-color: white;
         @media (max-width: 1199px) {
-          margin-top: 1rem;
+          margin-top: 450px;
+        }
+        @media (max-width: 991px) {
+          margin-top: 50px;
         }
       }
       // RIGHT COLUMN END
@@ -343,8 +403,16 @@
   #athlete-right-email-button {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf0404+0,ff3019+100 */
     background: #cf0404; /* Old browsers */
-    background: -moz-linear-gradient(left, #cf0404 0%, #ff3019 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #cf0404 0%, #ff3019 100%); /* Chrome10-25,Safari5.1-6 */
+    background: -moz-linear-gradient(
+      left,
+      #cf0404 0%,
+      #ff3019 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      left,
+      #cf0404 0%,
+      #ff3019 100%
+    ); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(
       to right,
       #cf0404 0%,
@@ -374,8 +442,16 @@
     margin-bottom: 1rem;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf0404+0,ff3019+100 */
     background: $cg-primary; /* Old browsers */
-    background: -moz-linear-gradient(left, #035083 0%, #0574b8 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #035083 0%, #0574b8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: -moz-linear-gradient(
+      left,
+      #035083 0%,
+      #0574b8 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      left,
+      #035083 0%,
+      #0574b8 100%
+    ); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(
       to right,
       #035083 0%,
@@ -460,6 +536,10 @@
   #item-body {
     #fep-wrapper {
       // border: 4px dotted red;
+      @media (max-width: 991px) {
+        // border: 4px dotted red;
+        margin-top: 200px;
+      }
       // MENU TOGGLE BUTTON
       #fep-menu-toggle-button {
         box-shadow: 1px 1px 6px gray;

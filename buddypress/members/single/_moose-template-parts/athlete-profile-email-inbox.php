@@ -77,14 +77,14 @@ $user_id = $current_user->ID;
         <span class="label float-right"><?php echo $weight; ?></span>
       </li>
     </ul>
-    <div class="athlete-sports-info">
-      <h1 class="float-left">
+    <div class="athlete-sports-info mt-5 mb-5">
+      <h1 class="sport-name">
         <?php echo $sport; ?><br>
-        <small class="float-left">SPORT</small>
+        <small class="">SPORT</small>
       </h1>
-      <h1 class="float-right">
+      <h1 class="enrollment-year">
         <?php echo $enrollment_year; ?><br>
-        <small class="float-right">ENROLLMENT YEAR</small>
+        <small class="">ENROLLMENT YEAR</small>
       </h1>
     </div>
   </section>

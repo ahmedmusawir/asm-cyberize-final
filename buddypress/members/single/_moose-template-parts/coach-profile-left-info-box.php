@@ -13,7 +13,7 @@ $user_id = bp_displayed_user_id();
  
 ?>
 
-<section class="athlete-info-box">
+<section class="coach-info-box">
   <div id="item-header-avatar">
     <!-- <a href="<?php bp_displayed_user_link(); ?>"> -->
 

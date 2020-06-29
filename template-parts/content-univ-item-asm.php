@@ -31,9 +31,9 @@ $location_class = $location_list[0]->slug;
         </a>
       </figure>
 
-      <!-- DON'T REMOVE : IMPORTANT   -->
-      <h4 class="location-state"><?php echo $location_class; ?></h4>
-      <!-- DON'T REMOVE : IMPORTANT   -->
+      <!-- UNIT TEST DATA   -->
+      <!-- <h4 class="location-state"><?php echo $location_class; ?></h4> -->
+      <!-- UNIT TEST DATA END   -->
 
       <?php else : ?>
 

@@ -41,10 +41,9 @@ get_header(); ?>
       <article class="col-md-6 d-none">
         <?php 
           $logged_in_user_obj = wp_get_current_user();
-          // echo '<pre>';
-          // print_r($logged_in_user_obj);
-          // echo '</pre>';
+
           $athlete_name = $logged_in_user_obj->display_name;
+          $athlete_slug = $logged_in_user_obj->user_nicename;
         ?>
         <h4 class="block-title"><?php the_field('top_left_title'); ?> <?php echo $athlete_name; ?>?</h4>
       </article>
@@ -77,7 +76,7 @@ get_header(); ?>
           </span>
           /12
         </h1>
-        <a href="#" class="btn btn-info">View Tasks</a>
+        <a href="#asm-dashboard-content" class="btn btn-info">View Tasks</a>
       </div>
 
       <div class="task-box task-box-sm text-center">
@@ -85,7 +84,7 @@ get_header(); ?>
         <h6 class="text-only">PROFILE VIEWS</h6>
         <!-- <h1 class="text-number"><?php //echo $total_profile_visit; ?></h1> -->
         <h1 class="text-number"><?php echo $total_profile_visit; ?></h1>
-        <a href="#" class="btn btn-info">View Who</a>
+        <a href="/members/<?php echo $athlete_slug; ?>/" class="btn btn-info">View Profile</a>
       </div>
 
       <div class="task-box task-box-sm text-center">
@@ -105,11 +104,10 @@ get_header(); ?>
         <?php else :?>
         <h1 class="text-number">0</h1>
         <?php endif; ?>
-        <a href="#" class="btn btn-info">View Messages</a>
+        <a href="/athlete-email-inbox/" class="btn btn-info">View Messages</a>
       </div>
 
       <div class="task-box task-box-lg text-center">
-        <!-- <img class="img-fluid" src="/wp-content/uploads/Screen-Shot-2020-03-03-at-7.11.26-PM.png" alt=""> -->
 
         <i class="fas fa-users pt-5"></i>
         <h1 class="text-only">

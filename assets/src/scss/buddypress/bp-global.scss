@@ -158,12 +158,13 @@ body.buddypress {
 
   // PROFILE BODY
   .bp-wrap {
-    margin-top: 150px;
+    margin-top: 170px;
+    // border: 4px dotted red;
 
     #item-body {
       margin-top: 60px;
       position: relative;
-      // border: 4px dotted red;
+      // border: 1rem dotted green;
 
       //  LEFT COLUMN START
       .athlete-info-box {
@@ -180,6 +181,26 @@ body.buddypress {
         }
         @media (max-width: 514px) {
           top: 50px;
+          // border: 4px dotted red;
+        }
+      }
+
+      .coach-info-box {
+        // border: 4px dotted red;
+        position: fixed;
+        top: 250px;
+        width: 23%;
+        @media (max-width: 1199px) {
+          width: 30%;
+        }
+        @media (max-width: 991px) {
+          position: relative;
+          width: 100%;
+          top: -100px;
+          // border: 4px dotted red;
+        }
+        @media (max-width: 514px) {
+          // top: -50px;
         }
       }
 
@@ -219,13 +240,21 @@ body.buddypress {
           border-top: 1px solid white;
           border-right: 1px solid white;
           border-left: 1px solid white;
+          // LABELS
+          .label {
+            // border: 4px dotted red;
+            @media (min-width: 992px) and (max-width: 1750px) {
+              font-size: 0.8rem;
+              font-weight: 800;
+            }
+          }
         }
       }
 
       // COACH PROFILE
       .coach-bio {
+        // border: 4px dotted red;
         .list-group-item {
-          // border: 4px dotted red;
           background-color: lighten($color: #e7e7e7, $amount: 8%);
           border-bottom: 4px solid white;
           border-top: 1px solid white;
@@ -234,6 +263,13 @@ body.buddypress {
 
           .values {
             font-weight: 700;
+          }
+          .label {
+            // border: 4px dotted red;
+            @media (min-width: 992px) and (max-width: 1750px) {
+              font-size: 0.8rem;
+              font-weight: 800;
+            }
           }
         }
 
@@ -248,14 +284,53 @@ body.buddypress {
 
       .athlete-sports-info {
         // border: 4px dotted blue;
+        @media (max-width: 991px) {
+          padding-top: 1rem;
+          margin-bottom: 2rem;
+          // border: 4px dotted blue;
+          @include clearfix;
+        }
+        @media (max-width: 500px) {
+          margin-bottom: 4rem;
+        }
+
         h1 {
           color: #024d80;
-          font-size: 1.5rem;
+          font-size: 1.3rem;
+          font-weight: 800;
           text-align: center;
+          @media (min-width: 992px) and (max-width: 1750px) {
+            font-size: 1.5rem;
+            font-weight: 800;
+          }
         }
         small {
-          font-size: 1rem;
-          font-weight: 500;
+          font-size: 0.8rem;
+          font-weight: 600;
+          @media (min-width: 992px) and (max-width: 1750px) {
+            font-size: 1rem;
+            font-weight: 800;
+          }
+        }
+        .sport-name {
+          float: left;
+          @media (min-width: 992px) and (max-width: 1750px) {
+            float: none;
+          }
+          @media (max-width: 500px) {
+            float: none;
+          }
+        }
+        .enrollment-year {
+          float: right;
+          @media (min-width: 992px) and (max-width: 1750px) {
+            float: none;
+          }
+          @media (max-width: 500px) {
+            float: none;
+            margin-bottom: 2rem;
+            // border: 3px dotted greenyellow;
+          }
         }
       }
 
@@ -281,7 +356,10 @@ body.buddypress {
               a {
                 color: white;
                 &:hover {
-                  background: lighten($color: $cg-primary, $amount: 40%) !important;
+                  background: lighten(
+                    $color: $cg-primary,
+                    $amount: 40%
+                  ) !important;
                 }
               }
 
@@ -506,8 +584,16 @@ body.buddypress {
   #athlete-right-email-button {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf0404+0,ff3019+100 */
     background: #cf0404; /* Old browsers */
-    background: -moz-linear-gradient(left, #cf0404 0%, #ff3019 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #cf0404 0%, #ff3019 100%); /* Chrome10-25,Safari5.1-6 */
+    background: -moz-linear-gradient(
+      left,
+      #cf0404 0%,
+      #ff3019 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      left,
+      #cf0404 0%,
+      #ff3019 100%
+    ); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(
       to right,
       #cf0404 0%,
@@ -536,8 +622,16 @@ body.buddypress {
     margin-bottom: 1rem;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf0404+0,ff3019+100 */
     background: $cg-primary; /* Old browsers */
-    background: -moz-linear-gradient(left, #035083 0%, #0574b8 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #035083 0%, #0574b8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: -moz-linear-gradient(
+      left,
+      #035083 0%,
+      #0574b8 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      left,
+      #035083 0%,
+      #0574b8 100%
+    ); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(
       to right,
       #035083 0%,
@@ -901,8 +995,9 @@ body.buddypress {
         }
       }
       @media (max-width: 600px) {
-        left: 5%;
+        left: 10%;
         top: 100px;
+        height: 300px;
         .no-data-title {
           font-size: 0.8rem;
           font-weight: 800;
@@ -929,7 +1024,7 @@ body.buddypress {
     @media (max-width: 1475px) {
       padding: 1rem;
     }
-    @media (max-width: 496px) {
+    @media (max-width: 593px) {
       margin-top: 2rem;
     }
     @media (max-width: 400px) {
@@ -1244,7 +1339,7 @@ body.buddypress {
   // border: 1rem dotted red;
   margin-top: -4.2rem;
   padding: 5rem;
-  background: url("/wp-content/uploads/Group-236.png");
+  background: url('/wp-content/uploads/Group-236.png');
 
   #register-page {
     // border: 1rem dotted dodgerblue;
