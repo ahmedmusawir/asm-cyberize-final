@@ -17,7 +17,7 @@ get_header(); ?>
     <section id="general-blog-page-header">
       <section class="top-page-menu clearfix">
 
-        <h3 class="menu-title float-left">Get Recruited</h3>
+        <h3 class="menu-title float-left mt-1">Get Recruited</h3>
 
       </section>
     </section>
