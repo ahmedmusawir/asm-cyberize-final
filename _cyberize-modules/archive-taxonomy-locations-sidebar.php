@@ -128,7 +128,7 @@
 
               <header class="blog-index-header py-1">
                 <?php
-                  the_archive_title( '<h2 class="archive-type">', '</h2>' );
+                  the_archive_title( '<h2 class="archive-location">', '</h2>' );
                 ?>
                 <!-- <div class="long-underline"></div>	 -->
 

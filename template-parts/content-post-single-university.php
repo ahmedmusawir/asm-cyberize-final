@@ -11,10 +11,27 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-single'); ?>>
   <section class="univ-single-asm">
+    <?php if (has_post_thumbnail()) : ?>
 
-    <figure class="featured-img-holder">
+    <figure class="featured-img-holder d-none d-md-block">
       <?php cyberize_post_thumbnail(); ?>
     </figure>
+
+    <figure class="featured-img-holder d-md-none mt-5 pt-5">
+      <?php cyberize_post_thumbnail('univ-mobile-size'); ?>
+    </figure>
+
+    <?php else : ?>
+
+    <figure class="featured-image-box">
+      <a href="<?php the_permalink(); ?>">
+        <img class="attachment-featured-size size-featured-size wp-post-image"
+          src="/wp-content/uploads/bg-image-1920x600-1.jpg" alt="">
+      </a>
+    </figure>
+
+
+    <?php endif; ?>
 
     <div class="entry-content container-fluid">
 
@@ -27,6 +44,7 @@
             <header class="univ-header row">
 
               <div class="col-md-9">
+
                 <?php
                 if ( is_singular() ) :
                   the_title( '<h1 class="entry-title">', '</h1>' );
@@ -45,6 +63,10 @@
                   <!-- <img class="img-fluid" src="/wp-content/uploads/university-logos.png" alt=""> -->
                 </figure>
               </div>
+
+
+
+
 
             </header>
 

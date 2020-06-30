@@ -191,6 +191,7 @@
 
     .post-item-container {
       position: relative;
+
       @media (max-width: 772px) {
         margin-top: 1rem;
       }
@@ -207,6 +208,13 @@
         .no-data-title {
           font-size: 1rem;
           padding-top: 3rem;
+        }
+      }
+
+      .archive-location {
+        // border: 1rem dotted red;
+        @media (max-width: 984px) {
+          padding-top: 2rem;
         }
       }
 

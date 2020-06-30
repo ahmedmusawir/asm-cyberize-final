@@ -31,9 +31,10 @@ $location_class = $location_list[0]->slug;
         </a>
       </figure>
 
-      <!-- UNIT TEST DATA   -->
-      <!-- <h4 class="location-state"><?php echo $location_class; ?></h4> -->
-      <!-- UNIT TEST DATA END   -->
+      <!-- DON'T REMOVE : IMPORTANT FOR AJAX LOAD MORE BTN (in UnivLoadMore.js file ...)  
+      let locationState = $('.location-state')[0].innerText; -->
+      <h4 class="location-state d-none"><?php echo $location_class; ?></h4>
+      <!-- DON'T REMOVE : IMPORTANT END  -->
 
       <?php else : ?>
 

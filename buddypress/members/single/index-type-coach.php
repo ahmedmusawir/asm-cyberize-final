@@ -11,28 +11,57 @@ get_header();
   <!-- FONT AWESOME 5 PRO -->
   <script src="https://kit.fontawesome.com/c8084101a0.js" crossorigin="anonymous"></script>
 
-  <div class="top-page-navbar">
+  <div class="top-page-navbar-coach">
 
     <section class="top-page-menu clearfix">
       <h3 class="menu-title float-left">Profile</h3>
+      <?php if (is_user_logged_in() && ($user_id == $current_user_id)) : ?>
+
+      <h3 id="edit-coach-profile-button" class="menu-title float-right">Edit Profile</h3>
+
+      <?php endif; ?>
+    </section>
+  </div>
+  <div class="top-filter-navbar-coach">
+
+    <section class="top-page-menu clearfix">
+      <h3 class="menu-title float-left">Filter</h3>
       <ul class="list-inline menu-box">
         <a href="#top-video-section">
-          <li class="list-inline-item"><i class="fad fa-video"></i>Video</li>
+
+          <li class="list-inline-item"><img class="img-icon"
+              src="/wp-content/uploads/Screen-Shot-2020-03-30-at-11.29.14-AM-e1585539321304.png" alt="">
+            <span class="btn-text">Video</span>
+          </li>
+
         </a>
         <a href="#about-section">
-          <li class="list-inline-item"><i class="fad fa-user-circle"></i>Bio</li>
+          <!-- <li class="list-inline-item"><i class="fad fa-user-circle"></i>Bio</li> -->
+          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/bio-icon.png" alt="">
+            <span class="btn-text">Bio</span>
+          </li>
         </a>
+
+
         <a href="#academics-section">
-          <li class="list-inline-item"><i class="fad fa-file-certificate"></i>University</li>
+          <!-- <li class="list-inline-item"><i class="fad fa-file-certificate"></i>Academics</li> -->
+          <li class="list-inline-item"><img class="img-icon"
+              src="/wp-content/uploads/Screen-Shot-2020-03-30-at-11.30.01-AM.png" alt="">
+            <span class="btn-text">Academics</span>
+          </li>
         </a>
         <a href="#instagram-section">
-          <li class="list-inline-item"><i class="fab fa-instagram"></i>Instagram</li>
+          <!-- <li class="list-inline-item"><i class="fab fa-instagram"></i>Instagram</li> -->
+          <li class="list-inline-item"><img class="img-icon" style="padding-top: .2rem;"
+              src="/wp-content/uploads/pics-icon.png" alt="">
+            <span class="btn-text">Instagram</span>
+          </li>
         </a>
 
       </ul>
+
     </section>
   </div>
-
   <div class="bp-wrap">
 
     <div id="item-body" class="item-body row">
@@ -66,8 +95,12 @@ get_header();
         <?php endif; ?>
 
         <!-- THE EDIT MENU START -->
+        <?php if (is_user_logged_in() && ($user_id == $current_user_id)) : ?>
         <!-- FOLLOWING IS USED FOR THE PROFILE EDIT FUNCTION ONLY -->
-        <?php bp_nouveau_member_template_part(); ?>
+        <section id="coach-profile-edit-box" class="">
+          <?php bp_nouveau_member_template_part(); ?>
+        </section>
+        <?php endif; ?>
         <!-- THE EDIT MENU END -->
 
         <?php //get_template_part( 'buddypress/members/single/parts/item-nav' ); ?>

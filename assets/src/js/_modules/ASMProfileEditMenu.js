@@ -3,24 +3,40 @@ class ASMProfileEditMenu {
     // console.info('ASM Edit Menu initialized!');
 
     // EDIT PROFILE NAV BUTTON
-    this.editProfileButton = document.getElementById(
+    this.editAthleteProfileButton = document.getElementById(
       'edit-athlete-profile-button'
     );
+    this.editCoachProfileButton = document.getElementById(
+      'edit-coach-profile-button'
+    );
     // EDIT PROFILE BOX
-    this.editProfileBox = document.getElementById('athlete-profile-edit-box');
+    this.editAthleteProfileBox = document.getElementById(
+      'athlete-profile-edit-box'
+    );
+    this.editCoachProfileBox = document.getElementById(
+      'coach-profile-edit-box'
+    );
 
-    if (this.editProfileBox) {
-      this.addEvents();
-    }
+    this.addEvents();
   }
 
   addEvents = () => {
-    this.editProfileButton.addEventListener('click', this.menuToggle);
+    if (this.editAthleteProfileBox) {
+      this.editAthleteProfileButton.addEventListener('click', this.menuToggle);
+    }
+    if (this.editCoachProfileBox) {
+      this.editCoachProfileButton.addEventListener('click', this.menuToggle);
+    }
   };
 
   menuToggle = () => {
     // console.log('Btn clicked');
-    this.editProfileBox.classList.toggle('d-none');
+    if (this.editAthleteProfileBox) {
+      this.editAthleteProfileBox.classList.toggle('d-none');
+    }
+    if (this.editCoachProfileBox) {
+      this.editCoachProfileBox.classList.toggle('d-none');
+    }
   };
 }
 

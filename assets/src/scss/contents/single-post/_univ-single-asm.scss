@@ -97,10 +97,18 @@
         padding-bottom: 2rem;
         margin-bottom: 2rem;
 
+        @media (max-width: 767px) {
+          text-align: center;
+        }
+
         .entry-title {
           // border: 5px dotted blue;
           margin-top: 30px;
           margin-bottom: 30px;
+
+          @media (max-width: 399px) {
+            font-size: 1.7rem;
+          }
 
           a {
             color: #013300;
@@ -144,7 +152,7 @@
           // color: $cg-primary;
           font-size: 0.8rem;
           font-weight: 700;
-          line-height: 0.5rem !important;
+          line-height: 1.5rem !important;
         }
 
         a {
