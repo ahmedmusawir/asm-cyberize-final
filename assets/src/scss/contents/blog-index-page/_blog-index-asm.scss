@@ -18,6 +18,15 @@
     }
     @media (max-width: 444px) {
       margin-top: 250px;
+      width: 100%;
+    }
+  }
+
+  .blog-index-header {
+    // border: 1rem dotted red;
+    @media (max-width: 767px) {
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
 
@@ -170,7 +179,7 @@
         margin-left: 60px;
 
         &::before {
-          content: url("../../../assets/img/comment-icon.png");
+          content: url('../../../assets/img/comment-icon.png');
           display: inline-block;
           vertical-align: middle;
           padding-right: 30px;
@@ -256,6 +265,10 @@
       -webkit-column-gap: 1.5em;
       column-gap: 1.5em;
       font-size: 0.85em;
+
+      @media (max-width: 450px) {
+        margin: 0em;
+      }
     }
     .item {
       display: inline-block;

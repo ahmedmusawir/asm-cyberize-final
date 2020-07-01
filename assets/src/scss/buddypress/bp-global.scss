@@ -833,6 +833,15 @@ body.buddypress {
   // border: 4px dotted pink;
   position: relative;
 
+  // SIDEBAR
+  .sidebar-container {
+    // border: 1rem dotted red;
+    @media (max-width: 991px) {
+      padding-left: 1rem;
+      // border: 1rem dotted red;
+    }
+  }
+
   // ANIMATION SPIN
   // .spin {
   //   animation-name: spin;
@@ -1158,7 +1167,7 @@ body.buddypress {
 
       @media (max-width: 400px) {
         box-shadow: none;
-        // border: 1px solid #e3e3e3;
+        border-bottom: 3px solid #e3e3e3;
 
         .col-12 {
           padding-right: 0 !important;
@@ -1311,14 +1320,33 @@ body.buddypress {
       top: 65px;
       background-color: $cg-secondary;
       width: 100%;
-      height: 80px;
+      height: 82px;
       z-index: 100;
 
       .bboss_search_filters_wrapper {
-        // border: 3px dotted yellow;
+        // border: 1rem dotted yellow;
+        @media (max-width: 748px) {
+          // border: 1rem dotted yellow;
+          width: 100%;
+        }
         .search_filters {
-          margin-top: 1.5rem;
+          margin-top: 2rem;
           margin-left: 1rem;
+          @media (max-width: 748px) {
+            // border: 1rem dotted yellow;
+            margin-left: 0;
+            .posts {
+              width: 100%;
+              margin-top: 1rem;
+              background: white !important;
+              // border: 5px dotted yellow;
+            }
+            .members {
+              width: 100%;
+              border: 1px solid #e7e7e7;
+              background: white !important;
+            }
+          }
         }
 
         ul {
@@ -1338,6 +1366,7 @@ body.buddypress {
 
       .bboss_search_form_wrapper {
         // width: 500px;
+        display: none;
         .search-form {
           margin-top: -1.5rem;
           margin-right: 1rem;
@@ -1358,30 +1387,67 @@ body.buddypress {
   #athlete-index-container {
     // border: 4px dotted hotpink;
     // margin-top: -2.5rem;
+    .sidebar-holder {
+      padding-left: 1rem;
+    }
   }
 
   /**
    * Global Search Member
    */
   .search_results {
+    // PAGINATION AT THE BOTTOM
+    .pagination.navigation {
+      // box-shadow: 2px 2px 6px #e7e7e7;
+      .pagination-links {
+        text-align: center;
+        // border: 1px dotted red;
+        display: block;
+        margin: 0 auto;
+        .page-numbers {
+          font-size: 1.5rem;
+          margin-right: 1rem;
+        }
+        .page-numbers.current {
+          padding: 0.5rem;
+          background-color: #e7e7e7;
+        }
+      }
+    }
+    // MEMBERS LIST
     #members-stream {
       .item-entry-asm {
         box-shadow: 2px 2px 6px #e7e7e7;
 
+        @media (max-width: 767px) {
+          box-shadow: none;
+          border-bottom: 3px solid #e7e7e7;
+        }
+
         .item-avatar-asm {
           margin-bottom: -1.5rem;
           margin-left: 1rem;
+          // border: 3px dotted red;
           img {
             width: 100% !important;
             height: auto !important;
+            @media (max-width: 767px) {
+              width: 80% !important;
+              margin: 0 auto;
+            }
           }
         }
         .item-asm {
+          padding-left: 2rem;
           .item-block-asm {
             .member-name {
               font-weight: 600;
               a {
+                font-size: 1.5rem;
                 color: $cg-primary;
+              }
+              @media (max-width: 767px) {
+                text-align: center;
               }
             }
 
@@ -1391,6 +1457,9 @@ body.buddypress {
                 font-size: 1rem;
                 font-weight: 700;
                 color: lighten($color: $cg-primary, $amount: 10%);
+              }
+              @media (max-width: 767px) {
+                text-align: center;
               }
             }
 
@@ -1425,6 +1494,7 @@ body.buddypress {
 
     .entry-title {
       padding: 0 2rem;
+      // border: 1rem dotted red;
 
       a {
         color: $cg-primary;
@@ -1437,6 +1507,7 @@ body.buddypress {
 
     .entry-content {
       padding: 0 2rem;
+      // border: 1rem dotted red;
 
       a.moretag {
         color: lighten($color: $cg-primary, $amount: 20%);

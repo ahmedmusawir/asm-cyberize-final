@@ -26,7 +26,7 @@
 
     <div class="row">
 
-      <div class="col-md-8">
+      <div class="col-sm-12 col-md-12 col-lg-8">
 
 
         <div class="search_results">
@@ -34,7 +34,7 @@
         </div>
 
       </div>
-      <div class="col-md-4">
+      <div class="col-sm-12 col-md-12 col-lg-4">
 
         <div class="sidebar-holder pr-3">
           <?php get_sidebar(); ?>

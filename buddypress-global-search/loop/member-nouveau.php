@@ -15,13 +15,13 @@
 <li <?php bp_member_class( array( 'item-entry-asm', 'bboss_search_item' ) ); ?>
   data-bp-item-id="<?php bp_member_user_id(); ?>" data-bp-item-component="members">
   <div class="list-wrap-asm row">
-    <div class="col-md-5">
+    <div class="col-md-4">
 
       <div class="item-avatar-asm">
         <a href="<?php bp_member_permalink(); ?>"><?php bp_member_avatar( bp_nouveau_avatar_args() ); ?></a>
       </div>
     </div>
-    <div class="col-md-7">
+    <div class="col-md-8">
 
       <div class="item-asm">
 
@@ -44,7 +44,7 @@
 
           <div class="text-content">
             <?php echo $excerpt; ?>
-            <h5 class="readmore"><a href="<?php bp_member_permalink(); ?>">[View Athlete...]</a></h5>
+            <h5 class="readmore float-right"><a href="<?php bp_member_permalink(); ?>">[View Athlete...]</a></h5>
           </div>
 
         </div> <!-- item-block row end -->

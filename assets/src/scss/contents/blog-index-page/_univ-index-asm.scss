@@ -202,8 +202,9 @@
       .no-data-found {
         position: absolute;
         // border: 3px dotted pink;
+        background-color: white;
         left: 5%;
-        top: 100px;
+        top: 115px;
 
         .no-data-title {
           font-size: 1rem;
@@ -214,7 +215,7 @@
       .archive-location {
         // border: 1rem dotted red;
         @media (max-width: 984px) {
-          padding-top: 2rem;
+          padding-top: 2.5rem;
         }
       }
 
