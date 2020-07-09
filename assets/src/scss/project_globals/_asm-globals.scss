@@ -72,28 +72,44 @@
       text-align: center;
     }
   }
+  #gform_page_1_3 {
+    // border: 1px dotted blue;
+    // ATHLETE PHONE
+    #input_1_26,
+    #input_1_24 {
+      padding: 1rem;
+      border-radius: 10px;
+    }
+  }
 }
 
 // THE REGISTRATION FORM PAGE 1
 #gform_page_1_1 {
-  // border: 1rem dotted red;
+  // border: 4px dotted red;
 
-  #field_1_19 {
+  #field_1_23 {
     padding: 0;
-    margin-bottom: -2rem;
+    margin-bottom: -1rem;
+    // border: 4px dotted blue;
 
-    #input_1_19 {
+    #input_1_23_3,
+    #input_1_23_6 {
       padding: 1rem;
       border-radius: 10px;
     }
   }
 
-  #field_1_2 {
+  #field_1_22 {
     padding: 0;
+    // border: 4px dotted blue;
 
-    #input_1_2 {
+    #input_1_22 {
       padding: 1rem;
       border-radius: 10px;
+    }
+
+    .gfield_required {
+      display: none;
     }
   }
 

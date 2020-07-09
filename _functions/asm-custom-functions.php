@@ -4,7 +4,18 @@
  */
 
  /**
- * University Load More Ajax Function
+  * LOGIN PAGE REGISTER URL CHANGE  
+  */
+ add_filter( 'register_url', 'asm_register_url' );
+  function asm_register_url( $url ) {
+      if( is_admin() ) {
+          return $url;
+      }
+      return "/signup/";
+  }
+
+ /**
+ * UNIVERSITY LOAD MORE AJAX FUNCTION
  */
 require get_template_directory() . '/_functions/univ-loadmore-function.php';
 require get_template_directory() . '/_functions/univ-location-loadmore-function.php';

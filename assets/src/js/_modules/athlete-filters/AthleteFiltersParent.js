@@ -20,7 +20,7 @@ class AthleteFiltersParent {
     const noDataItem = $('.no-data-found');
     setTimeout(function () {
       noDataItem.removeClass('d-none');
-    }, 2000);
+    }, 5000);
   }
 
   setEvents() {
